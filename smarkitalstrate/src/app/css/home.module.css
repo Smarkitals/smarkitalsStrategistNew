@@ -1,0 +1,254 @@
+.homeAll{
+  background: white;
+  width: 100%;
+
+}
+
+/* .footer{
+    position: absolute;
+    bottom: 0;
+} */
+
+
+
+
+
+.getTouch {
+    background: #068FD3;
+    color: white;
+    text-align: center;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.getTouch >h3 {
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.getTouch >p {
+    font-size:larger;
+    width: 50%;
+    color: #ccc;
+    margin: 1rem 0;
+
+}
+
+
+
+.getTouch button{
+        background: white;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    font-size: large;
+    border-radius: 12px;
+
+}
+
+
+.partnnerUS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+
+}
+
+.partnnerUS h3{
+    font-size: xx-large;
+    font-weight: 600;
+    margin: 0.7rem;
+
+}
+
+
+.partnnerUS p{
+    width: 50%;
+    font-size: large;
+    text-align: center;
+
+}
+
+.homeMainBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F6FBFF;
+    color: black;
+    padding: 8rem;
+}
+
+
+.homeMainBannerHeading{
+    font-size: 72px;
+    font-weight: 700;
+    color: black;
+    line-height: 100%;
+}
+.homeMainBannerHeadingBlue{
+    color: #068FD3;
+}
+
+
+
+.homeMainBanner p{
+        width: 50%;
+    font-size: large;
+    text-align: center;
+    margin: 1rem;
+}
+
+.homeMainBannerButton {
+    display: grid;
+    
+   
+}
+
+
+.homeMainBannerButton button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+
+
+.homeMainBannerButtonBlue{
+    background: #0090FF;
+    color: #ffffff;
+     
+}
+
+.homeMainBannerButtonWhite{
+    
+    background: white;
+    border: 1px solid #ccc;
+    
+}
+
+
+.homeCardSvgBg svg {
+        --tw-text-opacity: 1;
+    color: rgb(2 132 199 / var(--tw-text-opacity, 1));
+
+}
+
+.homeCardSvgBg{
+
+    --tw-bg-opacity: 1;
+    background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
+    width: fit-content;
+    border-radius: 100%;
+    padding: 0.7rem;
+}
+
+.homeCard h3 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.homeCard p{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.849);
+}
+
+.homeCards {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 5rem;
+}
+
+.homeCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem ;
+}
+
+.homeCard:hover{
+       box-shadow: 0px 1px 3px #ccccccde ;
+}
+
+@media only screen and (min-width:700px){
+    .homeMainBannerButton {
+
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+   
+}
+.partnnerUS {
+
+    padding: 4rem  7rem;
+}
+
+    
+}
+
+
+@media only screen and (max-width:700px){
+
+    .homeMainBanner {
+        padding:2rem 1rem;
+    }
+
+    .homeMainBannerHeading{
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .homeMainBanner p{
+        width: 90%;
+    }
+
+       .homeMainBannerButton {
+
+    grid-template-columns: auto;
+    row-gap: 1rem;
+    width: 100%;
+   
+}
+.partnnerUS {
+ 
+    padding: 2rem 1rem;
+}
+
+.partnnerUS h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0.7rem;
+
+}
+
+
+.partnnerUS p{
+    width: 100%;
+    font-size: large;
+    text-align: center;
+
+}
+.homeCards {
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.getTouch {
+    padding:2rem 1rem;
+}
+
+.getTouch >p {
+    
+    width: 100%;
+    
+
+}
+
+
+
+}

@@ -1,0 +1,350 @@
+.aboutMain{
+   
+    background: white;
+}
+.aboutMainBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F6FBFF;
+    color: black;
+    padding: 8rem;
+}
+
+
+.aboutMainBannerHeading{
+    font-size: 62px;
+    font-weight: 700;
+    color: black;
+    line-height: 100%;
+
+}
+.aboutMainBannerHeadingBlue{
+    color: #068FD3;
+}
+
+
+
+.aboutMainBanner p{
+        width: 50%;
+    font-size: large;
+    text-align: center;
+    margin: 1rem;
+}
+
+.aboutMainBannerButton {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+   
+}
+
+
+.aboutMainBannerButton button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+
+
+.aboutMainBannerButtonBlue{
+    background: #0090FF;
+    color: #ffffff;
+     
+}
+
+.aboutMainBannerButtonWhite{
+    
+    background: white;
+    border: 1px solid #ccc;
+    
+}
+
+
+
+
+.who h3{
+        color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.who p ,.who li{
+    font-size: 18px;
+}
+
+
+
+.whoRightBox {
+    padding: 2rem;
+    background: #0A99DD;
+    border-radius: 8px;
+    color: white!important;
+}
+
+.whoRightBox h3{
+    color: #ffffff;
+}
+
+.whoRightBox ul {
+      list-style-type: disc; 
+      margin-left: 1rem;
+
+    }
+
+.whoRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.foundation p{
+    width: 50%;
+    font-size: large;
+    text-align: center;
+        color: #414141;
+
+}
+
+
+
+
+
+
+.partOfBlue {
+    color: #0A99DD;
+}
+
+
+.partOf p{
+    width: 50%;
+    font-size: large;
+    text-align: center;
+        color: #414141;
+
+}
+
+
+.strengthBox{
+    
+    background: #E2F3FE;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+
+.strengthBox h3{
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.strengthBox p{
+    font-size: 18px;
+    color: #414141;
+    
+}
+
+
+
+.aboutCard {
+    color: black;
+    display: flex;
+    gap: 0.5rem;
+    padding: 1.5rem  3rem 1.5rem 1.5rem;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #dadada7a;
+
+}
+
+.aboutCardImg{
+     --tw-bg-opacity: 1;
+    background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
+    width: fit-content;
+    border-radius: 8px;
+    padding: 0.7rem;
+    height: fit-content;
+}
+
+.aboutCardImg svg{
+ --tw-text-opacity: 1;
+    color: rgb(2 132 199 / var(--tw-text-opacity, 1));
+
+}
+
+.aboutCard:hover{
+       box-shadow: 0px 1px 3px #ccccccde ;
+}
+
+
+
+@media only screen and (min-width:700px){
+    .who{
+    color: #414141;
+
+    padding: 2rem 7rem;
+    background: white;
+
+}
+    
+
+.whoFlex{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 60% 40%;
+}
+
+.foundation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 4rem  7rem;
+    background: #F9FAFB;
+}
+
+
+
+.foundation h3{
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0.7rem;
+
+}
+
+
+.aboutCards {
+    padding: 2rem 7rem ;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: #F9FAFB;
+    gap: 1.5rem;
+}
+
+
+.partOf h3{
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0.7rem;
+
+}
+
+.partOf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 4rem  7rem;
+    background: white;
+}
+.strength {
+    padding: 2rem 8rem;
+}
+
+.strengthBox{
+    padding: 2rem 8rem;}
+
+
+}
+
+
+@media only screen and (max-width:700px){
+
+     .aboutMainBanner {
+        padding:2rem 1rem;
+    }
+
+    .aboutMainBannerHeading{
+        font-size: 37px;
+        text-align: center;
+    }
+
+    .aboutMainBanner p{
+        width: 90%;
+    }
+
+    .who{
+    color: #414141;
+
+    padding: 2rem 1rem;
+    background: white;
+
+}
+
+.whoFlex{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 100%;
+}
+
+.foundation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 2rem 1rem;
+    background: #F9FAFB;
+}
+
+
+
+.foundation h3{
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0.7rem;
+
+}
+
+
+.foundation p{
+    width: 100%;
+
+}
+
+
+.aboutCards {
+    padding: 2rem 1rem ;
+    display: grid;
+    grid-template-columns: 100%;
+    background: #F9FAFB;
+    gap: 1.5rem;
+}
+
+.partOf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 2rem  1rem;
+    background: white;
+    
+}
+
+.partOf h3{
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0.7rem;
+    text-align: center;
+
+}
+
+.partOf p{
+    width: 100%;
+}
+.strength  {
+    padding: 2rem 1rem;
+}
+
+.strengthBox{
+    padding: 2rem;
+
+}
+
+}
