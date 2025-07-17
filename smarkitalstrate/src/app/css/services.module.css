@@ -1,0 +1,198 @@
+.servicesMain{
+   
+    background: white;
+}
+.serviceMainBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F6FBFF;
+    color: black;
+    padding: 8rem;
+}
+
+.serviceMainBannerHeading{
+    font-size: 62px;
+    font-weight: 700;
+    color: black;
+    line-height: 100%;
+
+}
+.serviceMainBannerHeadingBlue{
+    color: #068FD3;
+}
+
+
+
+.serviceMainBanner p{
+        width: 50%;
+    font-size: large;
+    text-align: center;
+    margin: 1rem;
+}
+
+.serviceCard {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 2rem 2rem 2rem;
+    box-shadow: 0px 1px 8px #cccccc ;
+    color: black;
+    border-radius: 8px;
+}
+
+.serviceCardTop {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.serviceCardImgBg{
+     --tw-bg-opacity: 1;
+    background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
+    width: fit-content;
+    border-radius: 8px;
+    padding: 0.7rem;
+    height: fit-content;
+}
+
+.serviceCardImgBg svg{
+ --tw-text-opacity: 1;
+    color: rgb(2 132 199 / var(--tw-text-opacity, 1));
+
+}
+
+.serviceCardHeading h3{
+    font-size: 25px;
+}
+
+.serviceCardHeading p{
+    font-size: 18px;
+    color: #414141;
+}
+
+.serviceCardUl ul {
+font-size: 16px;
+line-height: 2rem;
+ color: #414141;
+}
+
+.serviceCardUl ul li{
+    display: flex;
+    align-items: center;
+}
+
+.serviceCards {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 4rem 7rem;
+    gap: 2.7rem;
+}
+
+.solutionCard{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: start;
+        box-shadow: 0px 1px 3px 2px #cbcbcb;
+    border-radius: 10px
+}
+
+.solutionCardLeftHeading{
+        display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+
+.solutionCardLeftHeading{
+    color: black;
+    font-weight: 600;
+}
+
+.solutionCard h2{
+    font-size: 30px;
+}
+
+
+.solutionCardLeftButton{
+
+    padding: 0.5rem 1rem;
+        background: #199BFF;
+        color: white;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+}
+
+.solutionCardLeft{
+    padding: 3rem;
+    border: 1px solid;
+    width: 100%;
+    background: white;
+    border-radius: 10px 0 0 10px;
+}
+
+
+.solutionCardRight {
+        padding: 3rem;
+    border: 1px solid;
+    width: 100%;
+    background: #068ED1;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    height: -webkit-fill-available;
+}
+
+.solutionCardRight p{
+    color: #e9e5e5;
+    margin: 2rem 0;
+}
+
+
+.solutionCardRight ul li{
+     list-style-type: disc;
+     padding-left: 1rem;
+}
+
+
+.solution{
+    padding: 3rem 7rem;
+}
+
+
+@media only screen and (max-width:700px){
+    .serviceMainBanner {
+          padding: 1rem;
+    }
+    .serviceMainBannerHeading{
+        font-size: 40px;
+    }
+
+    .serviceMainBanner p{
+        width: 100%;
+    }
+    .serviceCards {
+        grid-template-columns: auto;
+            padding: 2rem 1rem;
+    }
+    .solution{
+        padding: 1rem;
+    }
+    .solutionCard{
+        grid-template-columns: auto;
+    }
+    .solutionCardLeft{
+        border-radius: 10px 10px 0 0;
+        padding: 2rem;
+    }
+
+    .solutionCardRight {
+        border-radius: 0 0 10px 10px;
+        padding: 2rem;
+    }
+
+    .solutionCardRight ul{
+        padding-left: 1rem;
+    }
+
+}
