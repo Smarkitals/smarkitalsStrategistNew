@@ -1,0 +1,153 @@
+.contactAll{
+   
+    background: white;
+}
+.contactBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F6FBFF;
+    color: black;
+    padding: 5rem 8rem;
+}
+
+.contactBannerHeading{
+    font-size: 62px;
+    font-weight: 700;
+    color: black;
+    line-height: 100%;
+
+}
+.contactBannerHeadingBlue{
+    color: #068FD3;
+}
+
+
+
+
+
+.contactBanner p{
+        width: 50%;
+    font-size: large;
+    text-align: center;
+    margin: 1rem;
+}
+
+
+.getTouch {
+    background: #068FD3;
+    color: white;
+    text-align: center;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.getTouch >h3 {
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.getTouch >p {
+    font-size:larger;
+    width: 50%;
+    color: #ccc;
+    margin: 1rem 0;
+
+}
+
+
+
+.getTouch button{
+        background: white;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    font-size: large;
+    border-radius: 12px;
+
+}
+
+.getouchButton {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.aboutCard {
+    color: black;
+    display: flex;
+    gap: 0.5rem;
+    padding: 1.5rem  3rem 1.5rem 1.5rem;
+    border-radius: 10px;
+    background: white;
+    
+
+}
+
+
+.aboutCard p{
+
+    --tw-text-opacity: 1;
+        color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+.aboutCardImg{
+     --tw-bg-opacity: 1;
+    background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
+    width: fit-content;
+    border-radius: 8px;
+    padding: 0.7rem;
+    height: fit-content;
+}
+
+.aboutCardImg svg{
+ --tw-text-opacity: 1;
+    color: rgb(2 132 199 / var(--tw-text-opacity, 1));
+
+}
+
+.aboutCard:hover{
+       box-shadow: 0px 1px 3px #ccccccde ;
+}
+
+.contactMainCentreLeft h5{
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+
+}
+
+
+
+@media only screen and (max-width :700px){
+    .contactBanner{
+            padding: 2rem;
+    }
+    .getTouch {
+    padding:2rem 1rem;
+}
+
+.getTouch >p {
+    
+    width: 100%;
+    
+
+}
+.getouchButton {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contactBannerHeading {
+    font-size: 35px;
+}
+
+.contactBanner p{
+    width: 100%;
+}
+    
+}

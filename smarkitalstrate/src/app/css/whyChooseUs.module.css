@@ -66,7 +66,7 @@
 
 .DifferentiatorsHeading {
     text-align: center;
-    margin-bottom: 3rem;
+    padding-top: 3rem;
 }
 
 .DifferentiatorsHeading h3{
@@ -115,10 +115,189 @@
 
 }
 
+
+
+.certificationsCard h4{
+    font-weight: 600;
+    color: black;
+    font-size: 18px;
+}
+
+.certificationsCardImg{
+        --tw-bg-opacity: 1;
+    background-color: rgb(2 132 199 / var(--tw-bg-opacity, 1));
+    width: max-content;
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+.certificationsCard{
+        background: #F0F9FF;
+        border-radius: 10px;
+        border: 1px solid #d3ecfc;
+        padding: 2rem 5rem;
+            width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+}
+
+
+
+.priorityLeft h3{
+
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+.priorityLeft {
+        display: flex
+;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.priorityLeft p {
+    color: #E7F5FC;
+    font-size: 18px;
+}
+
+.priorityLeft ul {
+    list-style-type:disc ;
+    color: #E7F5FC;
+    font-size: 18px;
+    margin-left: 1rem;
+}
+
+.priorityRightBox h5{
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+
+}
+
+.priorityRightBox  p {
+ color: #E7F5FC;
+    font-size: 18px;
+}
+
+.priorityRightBox{
+    background: #21A0DC;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    display: flex
+;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.priority {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    background: #0894D7;
+    padding: 5rem 7rem;
+    gap: 10%;
+    align-items: center;
+
+
+}
+
+
+@media only screen and (min-width:700px){
+    
 .DifferentiatorsCards {
     display: grid;
     grid-template-columns: 30% 30% 30%;
     padding: 4rem 7rem;
     gap: 2rem;
     justify-content: center;
+}
+    
+}
+
+
+@media only screen and (max-width:700px){
+
+    .whyChooseUsNumber {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    .certificationsCards {
+    display: grid ;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+        justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 7rem;
+}
+
+    
+.DifferentiatorsCards {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 2rem;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.certificationsCards {
+    display: grid ;
+    grid-template-columns: 100%;
+    gap: 2rem;
+        justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.certificationsCard {
+    padding: 2rem 0;
+} 
+
+
+.priority {
+    
+    grid-template-columns: 100%;
+    padding: 2rem;
+    gap: 2rem;
+
+
+}
+
+.priorityRightBox {
+    padding: 1rem;
+}
+
+.whyChooseUsBanner {
+    padding: 2rem;
+}
+
+.whyChooseUsBannerHeading {
+    font-size: 43px;
+    text-align: center;
+}
+
+.whyChooseUsBanner p {
+    width: 100%;
+}
+
+.whyChooseUsNumber h4{
+    font-size: 40px;
+
+}
+.whyChooseUsNumber p{
+    font-size: 16px;
+}
+
+.DifferentiatorsHeading h3{ 
+    font-size: 30px;
+    line-height: normal;
+    margin-bottom: 0.7rem;
+}
+
 }
