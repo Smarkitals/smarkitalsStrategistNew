@@ -214,6 +214,15 @@
     gap: 2rem;
     justify-content: center;
 }
+   .certificationsCards {
+    display: grid ;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+        justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 7rem;
+}
     
 }
 
@@ -226,15 +235,7 @@
         padding: 2rem;
         gap: 2rem;
     }
-    .certificationsCards {
-    display: grid ;
-    grid-template-columns: auto auto auto;
-    gap: 2rem;
-        justify-items: center;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 7rem;
-}
+ 
 
     
 .DifferentiatorsCards {
