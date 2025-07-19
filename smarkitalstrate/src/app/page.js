@@ -43,7 +43,7 @@ export default function Home() {
 
 
   <div className={styles.homeMainBannerButton}>
-    <button className={styles.homeMainBannerButtonBlue} onClick={handleClick('/contact')} >Start Your Journey with Us -&gt;
+    <button className={styles.homeMainBannerButtonBlue} onClick={handleClick('/contact')} >Start Your Journey with Us &rarr;
 </button>
 <button className={styles.homeMainBannerButtonWhite} onClick={handleClick('/services')} >Explore Our Services</button>
   </div>
@@ -103,7 +103,7 @@ export default function Home() {
     <p>Let's discuss how we can help you achieve your business goals with our comprehensive consulting services.</p>
 
     <button onClick={handleClick('/contact')} >
-      Get in Touch Today -&gt;
+      Get in Touch Today &rarr;
     </button>
 
 </div>

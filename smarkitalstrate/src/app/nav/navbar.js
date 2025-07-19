@@ -27,7 +27,10 @@ export default function Nav() {
   return (
     <div className={styles.nav}>
       <div className={styles.logo}>
-        <img src="" alt="Smarkitals Strategist LLP" />
+        {/* <img src="" alt="Smarkitals Strategist LLP" /> */}
+        <h2>
+          Smarkitals Strategist LLP
+        </h2>
       </div>
 
       <div className={styles.navOptions}>

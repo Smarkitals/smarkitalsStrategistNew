@@ -66,15 +66,27 @@ export default function Footer(){
                     <h3>Contact Info</h3>
                     <div className={styles.footerUpperContactDetails}>
                         <h4>
-                            +1 (555) 123-4567
+                            +91-9891894129
+
                         </h4>
                         <h4>
-                            info@smarkitals.com
+                        +91-7678255626
                         </h4>
+
                         <h4>
-                            123 Business District
-New York, NY 10001
+                             <a href="mailto:info@smarkitals.com">Info@smarkitals.in</a>
                         </h4>
+                       <h4>
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Unit-A908+Royal+Garden+Shalimar+City+Ghaziabad+Uttar+Pradesh+India-201005"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Unit-A908 Royal Garden Shalimar City<br />
+    Ghaziabad Uttar Pradesh<br />
+    India-201005
+  </a>
+</h4>
 
                     </div>
                 </div>

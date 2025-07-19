@@ -73,10 +73,24 @@ export default function Contact(){
                 </strong>  
             </h4>
             <p>
-               +1 (555) 123-4567
-            </p>
+            <a
+    href="https://wa.me/919891894129"
+    target="_blank"
+    rel="noopener noreferrer"
+  > +91-9891894129
+  </a>
+
+  </p>
             <p> 
-+1 (555) 987-6543
+               <a
+    href="https://wa.me/917678255626"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
++91-7678255626
+  </a>
+
+
             </p>
             <p>Call us during business hours</p>
         </div>
@@ -94,11 +108,11 @@ export default function Contact(){
                 </strong>  
             </h4>
             <p>
-              info@smarkitals.com
+                <a href="mailto:info@smarkitals.com">
+                  info@smarkitals.com
+                  </a>
             </p>
-            <p> 
-support@smarkitals.com
-            </p>
+           
             <p>
 Send us an email anytime</p>
         </div>
@@ -115,12 +129,17 @@ Send us an email anytime</p>
                 Address
                 </strong>  
             </h4>
-            <p>
-              123 Business District
-            </p>
-            <p> 
-New York, NY 10001
-            </p>
+            <h4>
+  <a
+    href="https://www.google.com/maps/place/Royal+Garden+(Apartment+Complex)+Shalimar+City/@28.6967882,77.343449,17z"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Unit-A908 Royal Garden Shalimar City<br />
+    Ghaziabad Uttar Pradesh<br />
+    India-201005
+  </a>
+</h4>
             <p>Visit our office</p>
         </div>
 
@@ -149,26 +168,6 @@ Sat: 10:00 AM - 2:00 PM
 
     </div>
 
-     <div className={styles.aboutCard} >
-        <div className={styles.aboutCardImg} >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-6 w-6 text-brand-blue-600" data-lov-id="src/pages/Contact.tsx:187:24" data-lov-name="info.icon" data-component-path="src/pages/Contact.tsx" data-component-line="187" data-component-file="Contact.tsx" data-component-name="info.icon" data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-brand-blue-600%22%7D"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        </div>
-        <div>
-            <h4>
-              <strong>
-                Phone
-                </strong>  
-            </h4>
-            <p>
-               +1 (555) 123-4567
-            </p>
-            <p> 
-+1 (555) 987-6543
-            </p>
-            <p>Call us during business hours</p>
-        </div>
-
-    </div>
             </div>
         </div>
 
@@ -192,10 +191,10 @@ Sat: 10:00 AM - 2:00 PM
     <div className={styles.getouchButton}>
 
     <button onClick={handleClick('/contact')} >
-      Get in Touch Today -&gt;
+      Get in Touch Today &rarr;
     </button>
     <button onClick={handleClick('/contact')} >
-      Download Brochure -&gt;
+      Download Brochure &rarr;
     </button>
     </div>
 
