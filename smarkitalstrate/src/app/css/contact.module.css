@@ -112,11 +112,55 @@
        box-shadow: 0px 1px 3px #ccccccde ;
 }
 
-.contactMainCentreLeft h5{
+.contactMainCentre h5{
     font-size: 30px;
     font-weight: 600;
     color: black;
 
+}
+
+.contactMainCentre{
+        display: grid
+;
+    grid-template-columns: 50% 50%;
+    padding: 2rem 8rem;
+    justify-items: center; 
+    color: black;
+}
+
+.contactMainCentreLeftContactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+.contactMainCentreLeftContactFormGrid {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+}
+.contactMainCentreLeftContactForm label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.contactMainCentreLeftContactFormGrid label input ,.contactMainCentreLeftContactForm label select ,.contactMainCentreLeftContactForm label textarea{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    
+}
+.contactMainCentreLeft {
+    width: -webkit-fill-available;
+}
+
+.contactMainCentreLeftContactForm button{
+    background: #0090FF;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
 }
 
 
@@ -128,6 +172,7 @@
     .getTouch {
     padding:2rem 1rem;
 }
+
 
 .getTouch >p {
     
@@ -148,6 +193,15 @@
 
 .contactBanner p{
     width: 100%;
+}
+
+.contactMainCentre{
+    grid-template-columns: 100%;
+    padding: 2rem;
+}
+.contactMainCentreLeftContactFormGrid{
+    grid-template-columns: 100%;
+    gap: 1rem;
 }
     
 }

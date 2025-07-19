@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import Nav from "../nav/navbar";
 import Footer from "../nav/footer";
+import ContactForm from './contactForm';
 import styles from "../css/contact.module.css";
 import "../globals.css";
 
@@ -46,12 +47,17 @@ export default function Contact(){
 </div>
 
 <div className={styles.contactMainCentre}>
-        <div>
+        <div className={styles.contactMainCentreLeft}>
             <h5>
                 Send us a Message
             </h5>
+            <div>
+              <ContactForm />
+             
+
+            </div>
         </div>
-        <div className={styles.contactMainCentreLeft}>
+        <div className={styles.contactMainCentreRight}>
             <h5>
                 Contact Information
             </h5>
