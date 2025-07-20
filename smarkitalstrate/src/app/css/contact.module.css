@@ -107,6 +107,11 @@
     color: rgb(2 132 199 / var(--tw-text-opacity, 1));
 
 }
+.contactMainCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
 .aboutCard:hover{
        box-shadow: 0px 1px 3px #ccccccde ;

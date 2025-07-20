@@ -54,7 +54,22 @@ const ContactForm = () => {
 </label>
 <label htmlFor="phoneNumber">
     Phone Number
-      <input type="tel" name="phone" required onChange={handleChange} />
+      <input type="tel" name="phone" onKeyDown={(e) => {
+    const allowedKeys = [
+      'Backspace',
+      'ArrowLeft',
+      'ArrowRight',
+      'Tab',
+      'Delete',
+    ];
+
+    if (
+      /[a-zA-Z]/.test(e.key) && // if alphabet key
+      !allowedKeys.includes(e.key)
+    ) {
+      e.preventDefault(); // Block alphabet input
+    }
+  }} required onChange={handleChange} />
 </label>
 <label htmlFor="cname">
     Company Name
@@ -78,7 +93,7 @@ const ContactForm = () => {
 </label>
 
 
-      <button type="submit">Submit</button>
+      <button style={{ cursor: 'pointer' }} type="submit">Submit</button>
     </form>
   );
 };

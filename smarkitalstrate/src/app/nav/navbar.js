@@ -35,31 +35,31 @@ export default function Nav() {
 
       <div className={styles.navOptions}>
         <h4
-          className={activeTab === '' ? styles.navActive : ''}
+          className={activeTab === '' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('')}
         >
           Home
         </h4>
         <h4
-          className={activeTab === 'about' ? styles.navActive : ''}
+          className={activeTab === 'about' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('about')}
         >
           About Us
         </h4>
         <h4
-          className={activeTab === 'services' ? styles.navActive : ''}
+          className={activeTab === 'services' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('services')}
         >
           Services
         </h4>
         <h4
-          className={activeTab === 'why-choose-us' ? styles.navActive : ''}
+          className={activeTab === 'why-choose-us' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('why-choose-us')}
         >
           Why Choose Us
         </h4>
         <h4
-          className={activeTab === 'contact' ? styles.navActive : ''}
+          className={activeTab === 'contact' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('contact')}
         >
           Contact
@@ -75,31 +75,31 @@ export default function Nav() {
  {showMobileMenu && (
       <div className={styles.navOptionsMobile}>
         <h4
-          className={activeTab === '' ? styles.navActive : ''}
+          className={activeTab === '' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('')}
         >
           Home
         </h4>
         <h4
-          className={activeTab === 'about' ? styles.navActive : ''}
+          className={activeTab === 'about' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('about')}
         >
           About Us
         </h4>
         <h4
-          className={activeTab === 'services' ? styles.navActive : ''}
+          className={activeTab === 'services' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('services')}
         >
           Services
         </h4>
         <h4
-          className={activeTab === 'why-choose-us' ? styles.navActive : ''}
+          className={activeTab === 'why-choose-us' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('why-choose-us')}
         >
           Why Choose Us
         </h4>
         <h4
-          className={activeTab === 'contact' ? styles.navActive : ''}
+          className={activeTab === 'contact' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
           onClick={handleClick('contact')}
         >
           Contact
@@ -108,7 +108,7 @@ export default function Nav() {
  )}
 
       <div className={styles.navbuttonDiv}>
-        <button className={styles.navbutton}>Get Started</button>
+        <button style={{ cursor: 'pointer' }} className={styles.navbutton}>Get Started</button>
       </div>
     </div>
   );

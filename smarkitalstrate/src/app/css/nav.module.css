@@ -69,6 +69,15 @@
     border-top: 1px solid #42424252;
 }
 
+.footerUpperAboutIcons{
+        display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 1rem;
+    margin-top: 0.7rem;
+}
+
 
 @media only screen and (min-width:700px){
     .navOptions {
