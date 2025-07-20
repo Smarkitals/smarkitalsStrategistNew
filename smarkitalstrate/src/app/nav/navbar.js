@@ -108,7 +108,7 @@ export default function Nav() {
  )}
 
       <div className={styles.navbuttonDiv}>
-        <button style={{ cursor: 'pointer' }} className={styles.navbutton}>Get Started</button>
+        <button style={{ cursor: 'pointer' }}  onClick={handleClick('contact')} className={styles.navbutton}>Get Started</button>
       </div>
     </div>
   );
