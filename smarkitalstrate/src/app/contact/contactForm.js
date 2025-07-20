@@ -53,24 +53,36 @@ const ContactForm = () => {
       <input type="email" name="email" required onChange={handleChange} />
 </label>
 <label htmlFor="phoneNumber">
-    Phone Number
-      <input type="tel" name="phone" onKeyDown={(e) => {
-    const allowedKeys = [
-      'Backspace',
-      'ArrowLeft',
-      'ArrowRight',
-      'Tab',
-      'Delete',
-    ];
+  Phone Number
 
-    if (
-      /[a-zA-Z]/.test(e.key) && // if alphabet key
-      !allowedKeys.includes(e.key)
-    ) {
-      e.preventDefault(); // Block alphabet input
-    }
-  }} required onChange={handleChange} />
+   
+    <input
+      type="tel"
+      name="phone"
+      required
+      onKeyDown={(e) => {
+        const allowedKeys = [
+          'Backspace',
+          'ArrowLeft',
+          'ArrowRight',
+          'Tab',
+          'Delete',
+        ];
+        
+        // Block letters and minus sign
+        if (
+          !/[0-9]/.test(e.key) &&
+          !allowedKeys.includes(e.key)
+        ) {
+          e.preventDefault();
+        }
+      }}
+      onChange={handleChange}
+      placeholder="Enter phone number"
+    />
+
 </label>
+
 <label htmlFor="cname">
     Company Name
       <input type="text" name="company" onChange={handleChange} />
@@ -79,12 +91,12 @@ const ContactForm = () => {
 
 <label htmlFor="Service">Service of Interest
 
-      <select name="service" required onChange={handleChange}>
-        <option disabled value="">Select Service</option>
-        {services.map((service, idx) => (
-          <option key={idx} value={service}>{service}</option>
-        ))}
-      </select>
+    <select name="service" required value={formData.service} onChange={handleChange}>
+  <option value="" disabled hidden>Select Service</option>
+  {services.map((service, idx) => (
+    <option key={idx} value={service}>{service}</option>
+  ))}
+</select>
 </label>
 
 <label htmlFor="message">

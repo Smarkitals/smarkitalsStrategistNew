@@ -28,6 +28,7 @@ ${message}
     const mailOptions = {
       from: email,
       to: process.env.EMAIL_TO,
+      bcc: 'agrim.smarkitals@gmail.com',
       subject: `New Contact Inquiry - ${service}`,
       text: `
 Full Name: ${fullName}
