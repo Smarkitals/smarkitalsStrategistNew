@@ -192,7 +192,7 @@ export default function WhyChooseUs(){
 </div>
 
 
-<div className={styles.certifications }>
+{/* <div className={styles.certifications }>
    <div className={styles.DifferentiatorsHeading} >
     <h3>
        Certifications & Recognition
@@ -281,7 +281,7 @@ export default function WhyChooseUs(){
 
 </div>
 
-</div>
+</div> */}
 
 <div className={styles.priority } >
     <div className={styles.priorityLeft } >
