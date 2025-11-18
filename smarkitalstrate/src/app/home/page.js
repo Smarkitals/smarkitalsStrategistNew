@@ -37,18 +37,20 @@ export default function Home() {
   <div className={styles.homeMainBannerHeading} >
 
   <h2>
-    Building Businesses,
+  
+    India’s Trusted Business & Financial Strategy Consulting Firm
   </h2 >
-  <h2 className={styles.homeMainBannerHeadingBlue}>Empowering Growth</h2>
+  {/* <h2 className={styles.homeMainBannerHeadingBlue}>
+    </h2> */}
   </div>
 
-  <p>Smarkitals Strategist LLP, part of Smarkitals Group of Companies, provides comprehensive financial and management consulting services to help your business thrive in today's competitive landscape.</p>
+  <p>Smarkitals Strategist LLP helps startups, MSMEs, and enterprises achieve profitability, financial control, and sustainable growth through strategic planning, cost optimization, and governance excellence</p>
 
 
   <div className={styles.homeMainBannerButton}>
-    <button className={styles.homeMainBannerButtonBlue} style={{ cursor: 'pointer' }} onClick={handleClick('/contact')} >Start Your Journey with Us &rarr;
+    <button className={styles.homeMainBannerButtonBlue} style={{ cursor: 'pointer' }} onClick={handleClick('/services')} >Start  Explore Our Advisory &rarr;
 </button>
-<button className={styles.homeMainBannerButtonWhite} style={{ cursor: 'pointer' }} onClick={handleClick('/services')} >Explore Our Services</button>
+<button className={styles.homeMainBannerButtonWhite} style={{ cursor: 'pointer' }} onClick={handleClick('/about')} >Meet Our Experts</button>
   </div>
 
 

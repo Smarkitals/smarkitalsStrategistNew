@@ -39,7 +39,8 @@ export default function Contact(){
    </h2>
   </div>
 
-  <p>Ready to transform your business? Contact us today to discuss how we can help you achieve your goals.</p>
+  <p>Ready to take your business to the next level? Our advisors specialize in helping MSMEs and corporates strengthen financial planning, governance, and strategic execution.
+</p>
 
 
 

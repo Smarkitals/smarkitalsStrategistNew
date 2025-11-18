@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import styles from "../css/nav.module.css";
+import Image from "next/image";
 
 export default function Nav() {
   const router = useRouter();
@@ -27,10 +28,12 @@ export default function Nav() {
   return (
     <div className={styles.nav}>
       <div className={styles.logo}>
-        {/* <img src="" alt="Smarkitals Strategist LLP" /> */}
-        <h2>
+        <Image src="/logo.png" alt="Smarkitals Strategist LLP"  width={150}
+      height={90}/>
+       {/* <h2>
           Smarkitals Strategist LLP
         </h2>
+        */}
       </div>
 
       <div className={styles.navOptions}>

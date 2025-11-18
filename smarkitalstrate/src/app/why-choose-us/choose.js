@@ -32,7 +32,8 @@ export default function WhyChooseUs(){
    </h2>
   </div>
 
-  <p>Discover what sets us apart as the preferred consulting partner for businesses across industries.</p>
+  <p>Your growth partner in financial strategy, business planning, and governance transformation.
+</p>
 
 
 
@@ -53,7 +54,7 @@ export default function WhyChooseUs(){
 
       <div>
         <h4>
-            15+
+            35+
         </h4>
         <p>
            Years Experience
@@ -309,7 +310,7 @@ export default function WhyChooseUs(){
             </li>
         </ul>
     </div>
-    <div className={styles.priorityRight }>
+    {/* <div className={styles.priorityRight }>
         <div className={styles.priorityRightBox }>
             <h5>
                 Ready to Experience the Difference?
@@ -330,7 +331,7 @@ export default function WhyChooseUs(){
             </div>
 
         </div>
-    </div>
+    </div> */}
 
 </div>
 

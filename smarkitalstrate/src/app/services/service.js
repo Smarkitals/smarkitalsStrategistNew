@@ -35,7 +35,10 @@ export default function Services(){
    </h2>
   </div>
 
-  <p>Part of the prestigious Smarkitals Group of Companies, we are dedicated to providing world-class financial and management consulting services.</p>
+  <p>
+Smarkitals Strategist LLP offers holistic consulting across financial planning, business restructuring, and corporate governance. We focus on transforming business operations into profitable, compliant, and sustainable systems.
+
+    </p>
 
 
 
@@ -50,7 +53,7 @@ export default function Services(){
 
             </div>
             <div className={styles.serviceCardHeading} >
-                <h3><strong> Business Registrations & Licensing
+                <h3><strong> Business & Financial Advisory
                     </strong> </h3>
                 <p>Complete assistance with business formation, registration, and licensing across various jurisdictions.</p>
             </div>
@@ -63,7 +66,9 @@ export default function Services(){
                     </span>
                     <span>
 
-                    Company Registration & Incorporation
+                    Business Setup & Financial Structuring
+
+
                     </span>
                 </li>
                 <li> 
@@ -72,7 +77,8 @@ export default function Services(){
                     </span>
                     <span>
 
-                    Business License Applications
+                    Budgeting, Forecasting & Financial Planning
+
                     </span>
                 </li>
                 <li> 
@@ -81,7 +87,8 @@ export default function Services(){
                     </span>
                     <span>
 
-Regulatory Compliance Setup
+Cash Flow & Working Capital Optimization
+
                     </span>
                 </li>
                 <li> 
@@ -90,7 +97,8 @@ Regulatory Compliance Setup
                     </span>
                     <span>
 
-Legal Structure Advisory
+Cost Analysis & Profitability Improvement
+
                     </span>
                 </li>
                 <li> 
@@ -98,13 +106,51 @@ Legal Structure Advisory
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-500 mr-3 flex-shrink-0" data-lov-id="src/pages/Services.tsx:115:22" data-lov-name="CheckCircle" data-component-path="src/pages/Services.tsx" data-component-line="115" data-component-file="Services.tsx" data-component-name="CheckCircle" data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%20mr-3%20flex-shrink-0%22%7D"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
                     </span>
                     <span>
+Fundraising & Investment Readiness
 
-Documentation Support
                     </span>
                 </li>
+
+
+{/* <li> 
+                    <span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-500 mr-3 flex-shrink-0" data-lov-id="src/pages/Services.tsx:115:22" data-lov-name="CheckCircle" data-component-path="src/pages/Services.tsx" data-component-line="115" data-component-file="Services.tsx" data-component-name="CheckCircle" data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%20mr-3%20flex-shrink-0%22%7D"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    </span>
+                    <span>
+Taxation, Audit & Regulatory Advisory
+
+                    </span>
+                </li> */}
+
+
+                <li> 
+                    <span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-500 mr-3 flex-shrink-0" data-lov-id="src/pages/Services.tsx:115:22" data-lov-name="CheckCircle" data-component-path="src/pages/Services.tsx" data-component-line="115" data-component-file="Services.tsx" data-component-name="CheckCircle" data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%20mr-3%20flex-shrink-0%22%7D"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    </span>
+                    <span>
+Internal Control & Governance Design
+
+                    </span>
+                </li>
+
+
+
+                <li> 
+                    <span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-500 mr-3 flex-shrink-0" data-lov-id="src/pages/Services.tsx:115:22" data-lov-name="CheckCircle" data-component-path="src/pages/Services.tsx" data-component-line="115" data-component-file="Services.tsx" data-component-name="CheckCircle" data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%20mr-3%20flex-shrink-0%22%7D"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    </span>
+                    <span>
+Virtual CFO & Controller Services
+
+                    </span>
+                </li>
+
             </ul>
         </div>
     </div>
+
+
+
 
      <div className={styles.serviceCard} >
         <div className={styles.serviceCardTop} >
@@ -113,7 +159,8 @@ Documentation Support
 
             </div>
             <div className={styles.serviceCardHeading} >
-                <h3><strong> Taxation & Compliance
+                <h3><strong> Corporate Strategy & Performance Consulting
+
                     </strong> </h3>
                 <p>Comprehensive tax planning, preparation, and compliance services to minimize liabilities and ensure regulatory adherence.</p>
             </div>
@@ -126,7 +173,9 @@ Documentation Support
                     </span>
                     <span>
 
-                    Tax Planning & Strategy
+                    Strategic Planning & Business Model Design
+
+
 
                     </span>
                 </li>
@@ -136,7 +185,7 @@ Documentation Support
                     </span>
                     <span>
 
-                    Tax Return Preparation
+                   KPI Frameworks & Performance Monitoring
 
                     </span>
                 </li>
@@ -146,7 +195,7 @@ Documentation Support
                     </span>
                     <span>
 
-GST/VAT Compliance
+ Process Improvement & Efficiency Programs
 
                     </span>
                 </li>
@@ -156,7 +205,8 @@ GST/VAT Compliance
                     </span>
                     <span>
 
-International Tax Advisory
+Market Expansion & Feasibility Analysis
+
 
                     </span>
                 </li>
@@ -166,9 +216,27 @@ International Tax Advisory
                     </span>
                     <span>
 
-Tax Audit Support
+Merger, Acquisition & Restructuring Strategy
+
                     </span>
                 </li>
+
+
+
+                                <li> 
+                    <span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-500 mr-3 flex-shrink-0" data-lov-id="src/pages/Services.tsx:115:22" data-lov-name="CheckCircle" data-component-path="src/pages/Services.tsx" data-component-line="115" data-component-file="Services.tsx" data-component-name="CheckCircle" data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%20mr-3%20flex-shrink-0%22%7D"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    </span>
+                    <span>
+
+
+                Profitability & Productivity Optimization
+
+                    </span>
+                </li>
+
+
+
             </ul>
         </div>
     </div>
@@ -180,7 +248,8 @@ Tax Audit Support
 
             </div>
             <div className={styles.serviceCardHeading} >
-                <h3><strong> Accounting & Outsourcing
+                <h3><strong> Risk, Audit & Governance
+
                     </strong> </h3>
                 <p>Professional accounting services and business process outsourcing solutions to streamline your operations.</p>
             </div>
@@ -193,7 +262,7 @@ Tax Audit Support
                     </span>
                     <span>
 
-                  Bookkeeping & Financial Reporting
+                   Internal & Management Audits
 
                     </span>
                 </li>
@@ -203,7 +272,7 @@ Tax Audit Support
                     </span>
                     <span>
 
-                  Payroll Processing
+                  Financial Risk & Control Assessment
 
                     </span>
                 </li>
@@ -213,7 +282,16 @@ Tax Audit Support
                     </span>
                     <span>
 
-Financial Statement Preparation
+SOP & Policy Framework Development
+
+                    </span>
+                </li>
+                <li> 
+                    <span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-500 mr-3 flex-shrink-0" data-lov-id="src/pages/Services.tsx:115:22" data-lov-name="CheckCircle" data-component-path="src/pages/Services.tsx" data-component-line="115" data-component-file="Services.tsx" data-component-name="CheckCircle" data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%20mr-3%20flex-shrink-0%22%7D"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    </span>
+                    <span>
+Compliance & Governance Audits
 
                     </span>
                 </li>
@@ -223,19 +301,23 @@ Financial Statement Preparation
                     </span>
                     <span>
 
-Cost Accounting
-
+Risk Register & Mitigation Planning
                     </span>
                 </li>
+
+
                 <li> 
                     <span>
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-500 mr-3 flex-shrink-0" data-lov-id="src/pages/Services.tsx:115:22" data-lov-name="CheckCircle" data-component-path="src/pages/Services.tsx" data-component-line="115" data-component-file="Services.tsx" data-component-name="CheckCircle" data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%20mr-3%20flex-shrink-0%22%7D"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
                     </span>
                     <span>
 
-Process Automation
+Management Reporting & Continuous Monitoring
                     </span>
                 </li>
+
+
+                
             </ul>
         </div>
     </div>
@@ -247,7 +329,7 @@ Process Automation
 
             </div>
             <div className={styles.serviceCardHeading} >
-                <h3><strong> Management Consulting
+                <h3><strong> Policy & Regulatory Affairs
                     </strong> </h3>
                 <p>Strategic consulting services to optimize business operations and drive sustainable growth.</p>
             </div>
@@ -260,7 +342,7 @@ Process Automation
                     </span>
                     <span>
 
-                    Strategic Planning
+                     Government Relations & Licensing
 
                     </span>
                 </li>
@@ -270,7 +352,7 @@ Process Automation
                     </span>
                     <span>
 
-                   Operational Excellence
+                  Policy Representation & Advocacy
 
                     </span>
                 </li>
@@ -280,7 +362,7 @@ Process Automation
                     </span>
                     <span>
 
-Performance Management
+Legal Documentation & Compliance
 
                     </span>
                 </li>
@@ -290,7 +372,7 @@ Performance Management
                     </span>
                     <span>
 
-Change Management
+CSR, ESG & Sustainability Consulting
 
                     </span>
                 </li>
@@ -300,7 +382,7 @@ Change Management
                     </span>
                     <span>
 
-Risk Assessment
+Tender Management & Land Acquisition Support
                     </span>
                 </li>
             </ul>

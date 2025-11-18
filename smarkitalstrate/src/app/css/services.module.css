@@ -8,7 +8,7 @@
     align-items: center;
     background: #F6FBFF;
     color: black;
-    padding: 8rem;
+    padding: 4rem 8rem;
 }
 
 .serviceMainBannerHeading{
@@ -19,7 +19,7 @@
 
 }
 .serviceMainBannerHeadingBlue{
-    color: #068FD3;
+    color: #0a99dd;
 }
 
 
@@ -81,12 +81,7 @@ line-height: 2rem;
     align-items: center;
 }
 
-.serviceCards {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 4rem 7rem;
-    gap: 2.7rem;
-}
+
 
 .solutionCard{
     display: grid;
@@ -160,6 +155,31 @@ line-height: 2rem;
 }
 
 
+@media only screen and (min-width:700px){
+
+    .serviceCards {
+        display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+     padding: 4rem 7rem;
+    }
+
+    .serviceCard {
+   
+    display: grid;
+    gap: 1rem;
+    padding: 2rem 2rem 2rem 2rem;
+    box-shadow: 0px 1px 8px #cccccc ;
+    color: black;
+    border-radius: 8px;
+    flex: 0 0 calc(50% - 16px);
+}
+
+}
+
+
+
 @media only screen and (max-width:700px){
     .serviceMainBanner {
           padding: 1rem;
@@ -172,6 +192,9 @@ line-height: 2rem;
         width: 100%;
     }
     .serviceCards {
+    display: grid;
+   
+    gap: 2.7rem;
         grid-template-columns: auto;
             padding: 2rem 1rem;
     }

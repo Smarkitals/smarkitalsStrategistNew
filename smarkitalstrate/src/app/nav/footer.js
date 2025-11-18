@@ -107,7 +107,49 @@ export default function Footer(){
             <br />
             <div className={styles.footerLower}>
 
-                <h4>&copy; 2024 Smarkitals Strategist LLP. All rights reserved. Part of Smarkitals Group of Companies.</h4>
+                <h4>&copy; 2025 Smarkitals Strategist LLP. All Rights Reserved.
+                  <br></br>
+                  India’s Trusted Business & Financial Strategy Consulting Firm
+<br></br>
+  </h4>
+  <p style={{'display':'flex','flexDirection':'row','gap':'10px'}} >
+ <p
+          style={{ cursor: 'pointer' }}
+          onClick={handleClick('/')}
+        >
+          Home
+        </p>
+        |
+        <p
+          style={{ cursor: 'pointer' }}
+          onClick={handleClick('/about')}
+        >
+          About Us
+        </p>
+        |
+        <p
+          style={{ cursor: 'pointer' }}
+          onClick={handleClick('/services')}
+        >
+          Services
+        </p>
+        |
+        <p
+          style={{ cursor: 'pointer' }}
+          onClick={handleClick('/why-choose-us')}
+        >
+          Why Choose Us
+        </p>
+        |
+        <p
+          style={{ cursor: 'pointer' }}
+          onClick={handleClick('/contact')}
+        >
+          Contact
+        </p>
+        </p>
+
+              
 
             </div>
         </div>

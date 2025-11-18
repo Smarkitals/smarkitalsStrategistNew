@@ -8,7 +8,7 @@
     align-items: center;
     background: #F6FBFF;
     color: black;
-    padding: 5rem 8rem;
+    padding: 4rem 8rem;
 }
 
 .whyChooseUsBannerHeading{
@@ -19,7 +19,7 @@
 
 }
 .whyChooseUsBannerHeadingBlue{
-    color: #068FD3;
+    color: #0a99dd;
 }
 
 
@@ -151,11 +151,16 @@
     font-weight: 600;
     color: white;
 }
+.priorityLeft li{
+
+   text-align: left;
+}
 .priorityLeft {
         display: flex
 ;
     flex-direction: column;
     gap: 1.5rem;
+        align-items: center;
 }
 
 .priorityLeft p {
@@ -195,7 +200,8 @@
 
 .priority {
     display: grid;
-    grid-template-columns: 45% 45%;
+    text-align: center;
+    grid-template-columns: 100%;
     background: #0894D7;
     padding: 5rem 7rem;
     gap: 10%;

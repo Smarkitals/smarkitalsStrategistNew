@@ -30,7 +30,7 @@ export default function About(){
    </h2>
   </div>
 
-  {/* <p>Part of the prestigious Smarkitals Group of Companies, we are dedicated to providing world-class financial and management consulting services.</p> */}
+  <p>Part of the prestigious Smarkitals Group of Companies, we are dedicated to providing world-class financial and management consulting services.</p>
 
 
 
@@ -43,7 +43,7 @@ export default function About(){
     <div className={styles.whoFlex} >
         <div>
             <p>
-                Smarkitals Strategist LLP is a leading business and financial advisory firm in India, guided by Mr. Manish Kulshrestha and Mr. Sanket Kulshrestha. We work with ambitious organizations to strengthen their financial systems, design actionable strategies, and drive measurable growth. Our advisory integrates financial planning, strategic management, and audit readiness ensuring that every business decision aligns with profitability and compliance.
+                Smarkitals Strategist LLP is a leading business and financial advisory firm in India, guided by Mr. Manish Kulshrestha and Mr. Sanket Kulshrestha. We work with ambitious organizations to strengthen their financial systems, design actionable strategies, and drive measurable growth. Our advisory integrates financial planning, strategic management, and audit readiness — ensuring that every business decision aligns with profitability and compliance.
 
 </p>
 <br />
@@ -56,13 +56,11 @@ export default function About(){
             <div className={styles.whoRightBox}>
                 <h3>Our Expertise</h3>
                 <ul>
-                    <li> <strong> Business & Financial Advisory</strong> – Data-driven financial strategies for MSMEs, startups, and enterprises.
-</li>
-                    <li><strong>Corporate Strategy & Performance Consulting</strong> – Growth planning, restructuring, and performance optimization.
-</li>
-                    <li><strong>Risk, Audit & Governance</strong> – Internal audit, process control, and risk mitigation frameworks.</li>
-                    <li><strong>Policy & Regulatory Affairs</strong> – Legal, policy, and government relations advisory for expanding businesses.</li>
-                    {/* <li>Startup & SME Advisory Services</li> */}
+                    <li>Business Registration & Licensing</li>
+                    <li>Taxation & Compliance Services</li>
+                    <li>Accounting & Outsourcing Solutions</li>
+                    <li>Strategic Management Consulting</li>
+                    <li>Startup & SME Advisory Services</li>
                 </ul>
             </div>
 
@@ -74,13 +72,7 @@ export default function About(){
 <div className={styles.foundation} >
 
     <h3>
-    <span>
-         Our&nbsp;  
-        </span> 
-         <span className={styles.partOfBlue}>
-
-          Foundation
-         </span>
+      Our Foundation
     </h3>
 
 
@@ -88,14 +80,6 @@ export default function About(){
 
 
 </div>
-
-
-
-
-
-
-
-
 
 <div className={styles.aboutCards}>
     <div className={styles.aboutCard} >
@@ -109,8 +93,7 @@ export default function About(){
                 </strong>  
             </h4>
             <p>
-               To strengthen the financial and operational performance of every client through structured planning, analytical insights, and practical execution.
-
+                To empower businesses with strategic financial and management solutions that drive sustainable growth and success.
             </p>
         </div>
 
@@ -126,8 +109,7 @@ export default function About(){
                 </strong>  
             </h4>
             <p>
-                 To be India’s most result-oriented financial strategy and business transformation partner.
-
+                To be the leading consulting firm that transforms businesses and creates lasting value for our clients and communities.
             </p>
         </div>
 
@@ -168,89 +150,36 @@ export default function About(){
 </div>
 
 
-<div className={styles.foundation} >
-
-    <h3>
-    <span>
-         Our&nbsp;  
-        </span> 
-         <span className={styles.partOfBlue}>
-
-          Leadership
-         </span>
-    </h3>
-
-
-</div>
-
-<div className={styles.leadershipCards}>
-    <div className={styles.leaderCard} >
-        <h3>Manish Kulshrestha</h3>
-        <h5>Group Founder & Chief Strategist – Smarkitals Group | Partner – Smarkitals Strategist LLP</h5>
-
-        <p>With over 35 years of high-impact experience in finance, taxation, and business planning, Manish Kulshrestha has advised and led initiatives across a remarkable spectrum of industries and organisations. His career has included senior roles in renowned firms such as the Apeejay Stya Group, Ananta Raj Industries, Aggarwal Packers & Movers, Fusion Buildtech and many more.
-In each engagement, he demonstrated a consistent ability to translate complex financial and regulatory landscapes into structured, growth-oriented solutions. From business setups and capital structuring to tax planning and risk mitigation, his expertise spans the full lifecycle of enterprise growth: inception, scaling, governance, and audit-ready maturity.
-At Smarkitals Strategist LLP, he leads the Business & Financial Advisory vertical. He guides startups, MSMEs and rapidly growing firms in establishing disciplined financial systems, robust internal controls, and clear strategic directionensuring the foundations of their businesses are both compliant and growth-driven. His deep domain experience across manufacturing, logistics, real estate, services and other sectors gives him the uncommon ability to connect financial strategy with operational reality.
-</p>
-    </div>
-
-
-    <div className={styles.leaderCard} >
-        <h3>Sanket Kulshrestha</h3>
-        <h5>Co-Founder & Managing Partner – Smarkitals Strategist LLP | Founder & CEO – Smarkitals Technologies India Pvt. Ltd.
-</h5>
-
-        <p>
-            Sanket Kulshrestha represents the convergence of finance, audit and technology in the modern advisory landscape. Before co-founding Smarkitals Strategist LLP, his career trajectory includes roles at the Samvardhana Motherson Group, Reliance Brands Ltd. and a professional tenure with Deloitte. This background equipped him with rigorous audit discipline, enterprise-grade analytics experience and a strategic mindset attuned to large-scale business challenges.
-At Smarkitals Strategist LLP, Sanket drives the firm’s consulting and tech-enabled advisory servicesensuring that financial strategy isn’t just well-formulated but also operationalised through digital tools, process automation and data-driven insights. His leadership spans internal audit analytics, ERP-driven work-order and maintenance metrics, cost-leakage identification and working-capital optimisation. He effectively bridges the world of big-corporate discipline with the agile needs of startups and high-growth SMEs.
-Under Sanket’s guidance, Smarkitals Strategist is positioned not just as a financial advisory firm, but as a strategic ecosystem where finance, governance and technology meet to build future-ready enterprises.
-</p>
-    </div>
-</div>
-
-
 
 
 <div className={styles.partOf} >
 
     <h3>
-     <span>Our&nbsp;</span><span className={styles.partOfBlue}  >Advisory Philosophy</span>
+     <span>Part of&nbsp;</span><span className={styles.partOfBlue}  >Smarkitals Group</span>
     </h3>
 
 
-    <p>We believe financial strategy is not paperwork it’s a roadmap for growth. Every engagement begins with data, develops into strategy, and ends with measurable business outcomes.
-</p>
+    <p>As a member of the Smarkitals Group of Companies, we leverage collective expertise and resources to provide comprehensive solutions that address all aspects of business growth and development.</p>
 
 
 </div>
 
 
-{/* <div className={styles.strength} >
+<div className={styles.strength} >
     <div className={styles.strengthBox}>
 
     <h3>
-   Group Structure
-
+     Strength in Unity
     </h3>
 
 
-    <p>
-Smarkitals Technologies India Pvt. Ltd.  Technology & Process Automation
-        <br></br>
-        Smarkitals Strategist LLP  Financial & Business Advisory
-<br>
-</br>
-<strong>
-Together forming Smarkitals Group  integrating finance, strategy, and digital execution.
-</strong>
-
-        </p>
+    <p>Our affiliation with the Smarkitals Group enables us to offer integrated services across multiple domains, ensuring that our clients receive holistic solutions that drive sustainable success. Together, we represent a powerhouse of expertise, innovation, and commitment to excellence.</p>
 
     </div>
 
 
 
-</div> */}
+</div>
 
 
 
