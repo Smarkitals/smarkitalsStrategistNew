@@ -1,0 +1,27 @@
+.section {
+  padding: var(--sectionYSm) 0;
+}
+
+.section.default {
+  background: var(--bg);
+}
+
+.section.surface {
+  background: var(--surface);
+}
+
+.section.accent {
+  background: var(--accentSoft);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--sectionY) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--sectionY) 0;
+  }
+}

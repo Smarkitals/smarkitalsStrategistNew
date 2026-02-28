@@ -1,310 +1,253 @@
-.whyChooseUsAll{
-   
-    background: white;
-}
-.whyChooseUsBanner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #F6FBFF;
-    color: black;
-    padding: 4rem 8rem;
+/* ============================================
+   WHY CHOOSE US PAGE STYLES - Ultra Luxury
+   ============================================ */
+
+.whyChooseUsAll {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.whyChooseUsBannerHeading{
-    font-size: 62px;
-    font-weight: 700;
-    color: black;
-    line-height: 100%;
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
 
-}
-.whyChooseUsBannerHeadingBlue{
-    color: #0a99dd;
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space10);
 }
 
-
-
-
-
-.whyChooseUsBanner p{
-        width: 50%;
-    font-size: large;
-    text-align: center;
-    margin: 1rem;
+.sectionHeader h2 {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space4);
+  letter-spacing: -0.018em;
 }
 
-
-.whyChooseUsNumber {
-    display: flex;
-    gap: 7rem;
-    align-items: center;
-    text-align: center;
-    background: white;
-    width: 100%;
-    padding: 4rem 7rem;
-    justify-content: center;
-
+.sectionSubtitle {
+  font-size: var(--body);
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.whyChooseUsNumber h4{
-    color: #0998DB;
-    font-size: 50px;
-    line-height: 100%;
-    font-weight: 600;
+/* ============================================
+   STATS GRID
+   ============================================ */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space8);
+  text-align: center;
 }
 
-
-.whyChooseUsNumber p{
-    color: #4b5563;
-    font-size: 18px;
+.statItem {
+  padding: var(--space6);
 }
 
-
-.Differentiators {
-    background:#F9FAFB;
+.statNumber {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: var(--space3);
+  letter-spacing: -0.05em;
 }
 
-.DifferentiatorsHeading {
-    text-align: center;
-    padding-top: 3rem;
+.statLabel {
+  font-size: var(--body);
+  color: var(--muted);
+  font-weight: 500;
 }
 
-.DifferentiatorsHeading h3{
-    font-size: 45px;
-    color: black;
-    font-weight: 600;
+/* ============================================
+   DIFFERENTIATORS - Equal Height Cards
+   ============================================ */
+
+.differentiatorsGrid {
+  display: grid;
+  gap: var(--space6);
+  align-items: stretch;
 }
 
-.DifferentiatorsHeading p{
-    color: #4b5563;
-    font-size: 18px;
+.differentiatorIcon {
+  width: 56px;
+  height: 56px;
+  background: var(--accentSoft);
+  border-radius: var(--radiusMd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: var(--space5);
 }
 
-
-.DifferentiatorsCardImg svg{
-
-    --tw-text-opacity: 1;
-    color: rgb(2 132 199 / var(--tw-text-opacity, 1));
+.differentiatorTitle {
+  font-size: var(--h4);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space3);
+  letter-spacing: -0.012em;
 }
 
-.DifferentiatorsCardImg {
-    --tw-bg-opacity: 1;
-    background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
-    padding: 1rem;
-    border-radius: 10px;
-    width: fit-content;
+.differentiatorDescription {
+  font-size: var(--body);
+  line-height: 1.65;
+  color: var(--muted);
 }
 
-.DifferentiatorsCard h5{
-    color: black;
-    font-weight: 600;
-    font-size: 22px;
+/* ============================================
+   ENGAGEMENT MODELS
+   ============================================ */
+
+.engagementCard {
+  padding: var(--space8);
 }
 
-.DifferentiatorsCard p{
-    color: #4b5563;
-
-    font-size: 18px;
+.engagementContent {
+  padding: var(--space4) 0;
 }
 
-.DifferentiatorsCard{
-    background: white;
-    box-shadow:  0px 3px 12px 0px #ccc;
-    padding: 2rem;
-    border-radius: 10px;
-
+.engagementContentTitle {
+  font-size: var(--h3);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space4);
+  letter-spacing: -0.015em;
 }
 
-
-
-.certificationsCard h4{
-    font-weight: 600;
-    color: black;
-    font-size: 18px;
+.engagementContentDescription {
+  font-size: var(--body);
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: var(--space6);
 }
 
-.certificationsCardImg{
-        --tw-bg-opacity: 1;
-    background-color: rgb(2 132 199 / var(--tw-bg-opacity, 1));
-    width: max-content;
-    padding: 1rem;
-    border-radius: 100%;
+.engagementContentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space3);
 }
 
-.certificationsCard{
-        background: #F0F9FF;
-        border-radius: 10px;
-        border: 1px solid #d3ecfc;
-        padding: 2rem 5rem;
-            width: -webkit-fill-available;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+.engagementContentList li {
+  font-size: var(--body);
+  line-height: 1.65;
+  color: var(--muted);
+  padding-left: var(--space5);
+  position: relative;
 }
 
-
-
-.priorityLeft h3{
-
-    font-size: 30px;
-    font-weight: 600;
-    color: white;
-}
-.priorityLeft li{
-
-   text-align: left;
-}
-.priorityLeft {
-        display: flex
-;
-    flex-direction: column;
-    gap: 1.5rem;
-        align-items: center;
+.engagementContentList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
 }
 
-.priorityLeft p {
-    color: #E7F5FC;
-    font-size: 18px;
+/* ============================================
+   PRIORITY CARD
+   ============================================ */
+
+.priorityCard {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: var(--space12);
 }
 
-.priorityLeft ul {
-    list-style-type:disc ;
-    color: #E7F5FC;
-    font-size: 18px;
-    margin-left: 1rem;
+.priorityTitle {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--space6);
+  letter-spacing: -0.018em;
 }
 
-.priorityRightBox h5{
-    color: white;
-    font-size: 26px;
-    font-weight: 600;
-
+.priorityDescription {
+  font-size: var(--body);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: var(--space8);
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.priorityRightBox  p {
- color: #E7F5FC;
-    font-size: 18px;
+.priorityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space4);
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.priorityRightBox{
-    background: #21A0DC;
-    border-radius: 10px;
-    padding: 2rem;
-    text-align: center;
-    display: flex
-;
-    flex-direction: column;
-    gap: 1.5rem;
+.priorityList li {
+  font-size: var(--body);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  padding-left: var(--space5);
+  position: relative;
 }
 
-.priority {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 100%;
-    background: #0894D7;
-    padding: 5rem 7rem;
-    gap: 10%;
-    align-items: center;
-
-
+.priorityList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: white;
+  font-weight: bold;
 }
 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 
-@media only screen and (min-width:700px){
-    
-.DifferentiatorsCards {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    padding: 4rem 7rem;
-    gap: 2rem;
-    justify-content: center;
-}
-   .certificationsCards {
-    display: grid ;
-    grid-template-columns: auto auto auto;
-    gap: 2rem;
-        justify-items: center;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 7rem;
-}
-    
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .differentiatorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+
+  .priorityList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-
-@media only screen and (max-width:700px){
-
-    .whyChooseUsNumber {
-        display: grid;
-        grid-template-columns: auto auto;
-        padding: 2rem;
-        gap: 2rem;
-    }
- 
-
-    
-.DifferentiatorsCards {
-    display: grid;
-    grid-template-columns: 100%;
-    padding: 2rem;
-    gap: 2rem;
-    justify-content: center;
+@media (min-width: 1024px) {
+  .differentiatorsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+  }
 }
 
-.certificationsCards {
-    display: grid ;
-    grid-template-columns: 100%;
-    gap: 2rem;
-        justify-items: center;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+@media (min-width: 900px) and (max-width: 1100px) {
+  .differentiatorsGrid {
+    gap: var(--space6);
+  }
 }
 
-.certificationsCard {
-    padding: 2rem 0;
-} 
+@media (max-width: 767px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-
-.priority {
-    
-    grid-template-columns: 100%;
-    padding: 2rem;
-    gap: 2rem;
-
-
-}
-
-.priorityRightBox {
-    padding: 1rem;
-}
-
-.whyChooseUsBanner {
-    padding: 2rem;
-}
-
-.whyChooseUsBannerHeading {
-    font-size: 43px;
-    text-align: center;
-}
-
-.whyChooseUsBanner p {
-    width: 100%;
-}
-
-.whyChooseUsNumber h4{
-    font-size: 40px;
-
-}
-.whyChooseUsNumber p{
-    font-size: 16px;
-}
-
-.DifferentiatorsHeading h3{ 
-    font-size: 30px;
-    line-height: normal;
-    margin-bottom: 0.7rem;
-}
-
+  .priorityList {
+    grid-template-columns: 1fr;
+  }
 }

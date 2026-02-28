@@ -1,255 +1,435 @@
-.homeAll{
-  background: white;
-  width: 100%;
+/* ============================================
+   HOMEPAGE STYLES - Ultra Luxury Immersive
+   ============================================ */
 
+.homeAll {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* .footer{
-    position: absolute;
-    bottom: 0;
-} */
+/* ============================================
+   HERO SECTION
+   ============================================ */
 
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--sectionY);
+  padding-bottom: var(--sectionY);
+}
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--accentSoft) 0%, rgba(11, 42, 74, 0.03) 100%);
+  opacity: 0.5;
+  z-index: 0;
+}
 
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--space12);
+  align-items: start;
+}
 
+.heroTitle {
+  font-size: var(--h1);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: var(--space6);
+  max-width: 900px;
+  letter-spacing: -0.02em;
+}
 
-.getTouch {
-    background: #068FD3;
-    color: white;
-    text-align: center;
-    padding: 6rem;
-    display: flex;
+.heroHighlight {
+  color: var(--accent);
+}
+
+.heroSubtitle {
+  font-size: var(--h4);
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: var(--space4);
+  max-width: 62ch;
+}
+
+.heroValueLine {
+  font-size: var(--body);
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: var(--space8);
+  min-height: 1.5em;
+}
+
+.heroCTAs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space3);
+}
+
+.credibilityPanel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radiusLg);
+  padding: var(--space6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space4);
+  box-shadow: var(--shadowSm);
+  position: relative;
+}
+
+.credibilityPanel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: var(--sheen-gradient);
+  border-radius: var(--radiusLg) var(--radiusLg) 0 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.credibilityItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space1);
+  padding-bottom: var(--space4);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.credibilityItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.credibilityItem strong {
+  font-size: var(--body);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space1);
+}
+
+.credibilityItem span {
+  font-size: var(--small);
+  color: var(--muted);
+}
+
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space12);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionTitle {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space4);
+  letter-spacing: -0.018em;
+}
+
+.sectionSubtitle {
+  font-size: var(--body);
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   SERVICES GRID - Equal Height
+   ============================================ */
+
+.servicesGrid {
+  display: grid;
+  gap: var(--space6);
+  margin-bottom: var(--space10);
+  align-items: stretch;
+}
+
+.serviceIcon {
+  width: 48px;
+  height: 48px;
+  background: var(--accentSoft);
+  border-radius: var(--radiusMd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: var(--space4);
+}
+
+.serviceTitle {
+  font-size: var(--h4);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space3);
+  letter-spacing: -0.012em;
+}
+
+.serviceDescription {
+  font-size: var(--body);
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.servicesCTA {
+  text-align: center;
+  margin-top: var(--space8);
+}
+
+/* ============================================
+   CONFIDENCE PAUSE SECTION
+   ============================================ */
+
+.confidencePause {
+  padding: var(--sectionYSm) 0;
+  text-align: center;
+}
+
+.confidenceContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.confidenceText {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  font-style: italic;
+}
+
+/* ============================================
+   HOW WE WORK SECTION
+   ============================================ */
+
+.howWeWorkSection {
+  padding: var(--sectionY) 0;
+}
+
+/* ============================================
+   IMPACT SNAPSHOTS - Equal Height Cards
+   ============================================ */
+
+.impactGrid {
+  display: grid;
+  gap: var(--space6);
+  align-items: stretch;
+}
+
+.impactScenario {
+  font-size: var(--h4);
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--space4);
+  padding-bottom: var(--space4);
+  border-bottom: 1px solid var(--border);
+  letter-spacing: -0.012em;
+}
+
+.impactIntervention,
+.impactOutcome {
+  font-size: var(--body);
+  line-height: 1.65;
+  color: var(--muted);
+  margin-bottom: var(--space3);
+}
+
+.impactIntervention strong,
+.impactOutcome strong {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--small);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: var(--space2);
+}
+
+.impactOutcome {
+  margin-bottom: 0;
+  padding-top: var(--space4);
+  border-top: 1px solid var(--border);
+  margin-top: var(--space4);
+}
+
+/* ============================================
+   FOUNDER'S NOTE SECTION
+   ============================================ */
+
+.foundersNote {
+  padding: var(--sectionY) 0;
+  background: var(--surface);
+  color: var(--ink);
+  position: relative;
+}
+
+.foundersNote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.foundersContent {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.foundersLabel {
+  font-size: var(--small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: var(--space6);
+}
+
+.foundersText {
+  font-size: var(--h3);
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: var(--space8);
+  font-style: italic;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+.foundersSignature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space3);
+  padding-top: var(--space6);
+  border-top: 1px solid var(--border);
+}
+
+.signatureLine {
+  width: 120px;
+  height: 1px;
+  background: var(--borderStrong);
+}
+
+.signatureName {
+  font-size: var(--body);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.ctaSection {
+  text-align: center;
+  padding: var(--sectionY) 0;
+  margin-bottom: var(--space12);
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space4);
+  letter-spacing: -0.018em;
+}
+
+.ctaSubtitle {
+  font-size: var(--body);
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: var(--space6);
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 768px) {
+  .heroContent {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+  }
+
+  .credibilityPanel {
+    padding: var(--space8);
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impactGrid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .servicesGrid {
+    gap: var(--space8);
+  }
+
+  .impactGrid {
+    gap: var(--space8);
+  }
+}
+
+@media (max-width: 767px) {
+  .heroContent {
+    gap: var(--space8);
+  }
+
+  .heroCTAs {
     flex-direction: column;
-    align-items: center;
+  }
 
-}
-
-
-.getTouch >h3 {
-    font-size: xx-large;
-    font-weight: 700;
-}
-
-.getTouch >p {
-    font-size:larger;
-    width: 50%;
-    color: #ccc;
-    margin: 1rem 0;
-
-}
-
-
-
-.getTouch button{
-        background: white;
-    color: black;
-    padding: 0.5rem 1.5rem;
-    font-size: large;
-    border-radius: 12px;
-
-}
-
-
-.partnnerUS {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-
-}
-
-.partnnerUS h3{
-    font-size: xx-large;
-    font-weight: 600;
-    margin: 0.7rem;
-
-}
-
-
-.partnnerUS p{
-    width: 50%;
-    font-size: large;
-    text-align: center;
-
-}
-
-.homeMainBanner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #F6FBFF;
-    color: black;
-    padding: 8rem;
-}
-
-
-.homeMainBannerHeading{
-    font-size: 72px;
-    font-weight: 700;
-    color: black;
-    line-height: 100%;
-    text-align: center;
-}
-.homeMainBannerHeadingBlue{
-    color: #068FD3;
-}
-
-
-
-.homeMainBanner p{
-        width: 50%;
-    font-size: large;
-    text-align: center;
-    margin: 1rem;
-}
-
-.homeMainBannerButton {
-    display: grid;
-    
-   
-}
-
-
-.homeMainBannerButton button {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-}
-
-
-
-.homeMainBannerButtonBlue{
-    background: #0090FF;
-    color: #ffffff;
-     
-}
-
-.homeMainBannerButtonWhite{
-    
-    background: white;
-    border: 1px solid #ccc;
-    
-}
-
-
-.homeCardSvgBg svg {
-        --tw-text-opacity: 1;
-    color: rgb(2 132 199 / var(--tw-text-opacity, 1));
-
-}
-
-.homeCardSvgBg{
-
-    --tw-bg-opacity: 1;
-    background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
-    width: fit-content;
-    border-radius: 100%;
-    padding: 0.7rem;
-}
-
-.homeCard h3 {
-    font-size: 20px;
-    color: black;
-    margin-bottom: 0.3rem;
-    font-weight: 600;
-}
-
-.homeCard p{
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.849);
-}
-
-.homeCards {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 5rem;
-}
-
-.homeCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem ;
-}
-
-.homeCard:hover{
-       box-shadow: 0px 1px 3px #ccccccde ;
-}
-
-@media only screen and (min-width:700px){
-    .homeMainBannerButton {
-
-    grid-template-columns: auto auto;
-    column-gap: 1rem;
-   
-}
-.partnnerUS {
-
-    padding: 4rem  7rem;
-}
-
-    
-}
-
-
-@media only screen and (max-width:700px){
-
-    .homeMainBanner {
-        padding:2rem 1rem;
-    }
-
-    .homeMainBannerHeading{
-        font-size: 50px;
-        text-align: center;
-    }
-
-    .homeMainBanner p{
-        width: 90%;
-    }
-
-       .homeMainBannerButton {
-
-    grid-template-columns: auto;
-    row-gap: 1rem;
+  .heroCTAs > * {
     width: 100%;
-   
-}
-.partnnerUS {
- 
-    padding: 2rem 1rem;
-}
-
-.partnnerUS h3{
-    font-size: 30px;
-    font-weight: 600;
-    margin: 0.7rem;
-
-}
-
-
-.partnnerUS p{
-    width: 100%;
-    font-size: large;
-    text-align: center;
-
-}
-.homeCards {
-    flex-direction: column;
-    padding: 1rem;
-}
-
-.getTouch {
-    padding:2rem 1rem;
-}
-
-.getTouch >p {
-    
-    width: 100%;
-    
-
-}
-
-
-
+  }
 }

@@ -1,6 +1,8 @@
+'use client';
 
 import { useState } from 'react';
 import styles from "../css/contact.module.css";
+import Button from "../components/Button";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -12,100 +14,188 @@ const ContactForm = () => {
     message: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
   const services = [
-    'Taxation & Compliance',
-    'Accounting & Outsourcing',
-    'Management Consulting',
+    'Business & Financial Advisory',
+    'Corporate Strategy & Performance Consulting',
+    'Risk, Audit & Governance',
+    'Policy & Regulatory Affairs',
     'Startup & SME Advisory',
     'Custom Solutions',
-    'Business Registration & Licensing',
   ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear status when user starts typing
+    if (submitStatus) setSubmitStatus(null);
   };
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-   const res = await fetch('/api/contactForm', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(formData),
-});
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    if (res.ok) {
-      alert('Form submitted successfully!');
-    } else {
-      alert('Failed to submit form.');
+    try {
+      const res = await fetch('/api/contactForm', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.contactMainCentreLeftContactForm}>
-    <div className={styles.contactMainCentreLeftContactFormGrid} >
-<label htmlFor="fname">
-    Full Name
-      <input type="text" name="fullName" required onChange={handleChange} />
-</label>
-<label htmlFor="email">
-    Email Address
-      <input type="email" name="email" required onChange={handleChange} />
-</label>
-<label htmlFor="phoneNumber">
-  Phone Number
+    <form onSubmit={handleSubmit} className={styles.contactForm}>
+      <div className={styles.formGrid}>
+        <div className={styles.formGroup}>
+          <label htmlFor="fullName">
+            Full Name <span className={styles.required}>*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            required
+            aria-required="true"
+          />
+        </div>
 
-   
-    <input
-      type="tel"
-      name="phone"
-      required
-      onKeyDown={(e) => {
-        const allowedKeys = [
-          'Backspace',
-          'ArrowLeft',
-          'ArrowRight',
-          'Tab',
-          'Delete',
-        ];
-        
-        // Block letters and minus sign
-        if (
-          !/[0-9]/.test(e.key) &&
-          !allowedKeys.includes(e.key)
-        ) {
-          e.preventDefault();
-        }
-      }}
-      onChange={handleChange}
-      placeholder="Enter phone number"
-    />
+        <div className={styles.formGroup}>
+          <label htmlFor="email">
+            Email Address <span className={styles.required}>*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            aria-required="true"
+          />
+        </div>
 
-</label>
+        <div className={styles.formGroup}>
+          <label htmlFor="phone">
+            Phone Number <span className={styles.required}>*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            aria-required="true"
+            onKeyDown={(e) => {
+              const allowedKeys = [
+                'Backspace',
+                'ArrowLeft',
+                'ArrowRight',
+                'Tab',
+                'Delete',
+              ];
+              
+              if (!/[0-9]/.test(e.key) && !allowedKeys.includes(e.key)) {
+                e.preventDefault();
+              }
+            }}
+            placeholder="Enter phone number"
+          />
+        </div>
 
-<label htmlFor="cname">
-    Company Name
-      <input type="text" name="company" onChange={handleChange} />
-</label>
-    </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="company">Company Name</label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+          />
+        </div>
+      </div>
 
-<label htmlFor="Service">Service of Interest
+      <div className={styles.formGroup}>
+        <label htmlFor="service">
+          Service of Interest <span className={styles.required}>*</span>
+        </label>
+        <select
+          id="service"
+          name="service"
+          value={formData.service}
+          onChange={handleChange}
+          required
+          aria-required="true"
+        >
+          <option value="" disabled hidden>Select Service</option>
+          {services.map((service, idx) => (
+            <option key={idx} value={service}>{service}</option>
+          ))}
+        </select>
+      </div>
 
-    <select name="service" required value={formData.service} onChange={handleChange}>
-  <option value="" disabled hidden>Select Service</option>
-  {services.map((service, idx) => (
-    <option key={idx} value={service}>{service}</option>
-  ))}
-</select>
-</label>
+      <div className={styles.formGroup}>
+        <label htmlFor="message">
+          Message <span className={styles.required}>*</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Your Message"
+          required
+          aria-required="true"
+          rows="5"
+        ></textarea>
+      </div>
 
-<label htmlFor="message">
-    Message
-      <textarea name="message" placeholder="Your Message" required onChange={handleChange}></textarea>
-</label>
+      {submitStatus === 'success' && (
+        <div className={styles.formSuccess} role="alert">
+          Thank you! Your message has been sent successfully. We'll get back to you soon.
+        </div>
+      )}
 
+      {submitStatus === 'error' && (
+        <div className={styles.formError} role="alert">
+          Sorry, there was an error sending your message. Please try again or contact us directly.
+        </div>
+      )}
 
-      <button style={{ cursor: 'pointer' }} type="submit">Submit</button>
+      <div className={styles.formActions}>
+        <Button
+          type="submit"
+          variant="primary"
+          size="lg"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Sending...' : 'Submit'}
+        </Button>
+      </div>
     </form>
   );
 };

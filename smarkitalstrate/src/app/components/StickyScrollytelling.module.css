@@ -1,0 +1,292 @@
+.container {
+  display: grid;
+  gap: var(--space8);
+}
+
+.stickyColumn {
+  order: 2;
+}
+
+.stickyContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space6);
+}
+
+.stickyLabel {
+  font-size: var(--small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: var(--space2);
+}
+
+.stickyTitle {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space6);
+  letter-spacing: -0.018em;
+}
+
+.progressRail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space6);
+  margin-bottom: var(--space6);
+}
+
+.progressStep {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space4);
+  padding: var(--space4);
+  border-radius: var(--radiusMd);
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.progressStep.active {
+  opacity: 1;
+  background: var(--accentSoft);
+}
+
+.progressDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+  transition: all 0.3s ease;
+}
+
+.progressStep.active .progressDot {
+  border-color: var(--accent);
+}
+
+.progressDotInner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.progressStepContent {
+  flex: 1;
+}
+
+.progressStepNumber {
+  font-size: var(--small);
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: var(--space1);
+}
+
+.progressStep.active .progressStepNumber {
+  color: var(--accent);
+}
+
+.progressStepTitle {
+  font-size: var(--h4);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.012em;
+}
+
+.stickyDescription {
+  font-size: var(--body);
+  line-height: 1.65;
+  color: var(--muted);
+  padding-top: var(--space4);
+  border-top: 1px solid var(--border);
+}
+
+.contentColumn {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space16);
+}
+
+.stepContent {
+  padding: var(--space10);
+  min-height: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radiusLg);
+  box-shadow: var(--shadowSm);
+  position: relative;
+}
+
+.stepContent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: var(--sheen-gradient);
+  border-radius: var(--radiusLg) var(--radiusLg) 0 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.stepContent.active {
+  opacity: 1;
+  border-color: var(--borderStrong);
+  box-shadow: var(--shadowMd);
+}
+
+.stepBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radiusMd);
+  background: var(--accentSoft);
+  color: var(--accent);
+  font-size: var(--h4);
+  font-weight: 700;
+  margin-bottom: var(--space6);
+  letter-spacing: -0.02em;
+}
+
+.contentTitle {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space6);
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+}
+
+.stepDeliverables {
+  margin-bottom: var(--space6);
+}
+
+.deliverablesLabel {
+  display: block;
+  font-size: var(--body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: var(--space3);
+}
+
+.deliverablesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space3);
+}
+
+.deliverablesList li {
+  font-size: var(--body);
+  line-height: 1.7;
+  color: var(--ink);
+  padding-left: var(--space5);
+  position: relative;
+}
+
+.deliverablesList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.stepMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space3);
+  padding: var(--space5);
+  background: var(--accentSoft);
+  border-radius: var(--radiusMd);
+  margin-bottom: var(--space6);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space1);
+}
+
+.metaLabel {
+  font-size: var(--small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.metaValue {
+  font-size: var(--body);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+.contentDetail {
+  font-size: var(--body);
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1.8fr;
+    gap: var(--space12);
+  }
+
+  .stickyColumn {
+    order: 1;
+  }
+
+  .stickyContent {
+    position: sticky;
+    top: 120px;
+  }
+
+  .contentColumn {
+    order: 2;
+    gap: var(--space20);
+  }
+
+  .stepContent {
+    padding: var(--space12);
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .container {
+    gap: var(--space10);
+  }
+
+  .stepContent {
+    padding: var(--space8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progressStep,
+  .stepContent {
+    transition: none;
+  }
+}

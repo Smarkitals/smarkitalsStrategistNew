@@ -1,394 +1,233 @@
-.aboutMain{
-   
-    background: white;
-}
-.aboutMainBanner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #F6FBFF;
-    color: black;
-    padding: 4rem 8rem;
+/* ============================================
+   ABOUT PAGE STYLES - Ultra Luxury
+   ============================================ */
+
+.aboutAll {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.aboutMainBannerHeading{
-    font-size: 62px;
-    font-weight: 700;
-    color: black;
-    line-height: 100%;
-
-}
-.aboutMainBannerHeadingBlue{
-    color: #0a99dd;
+.aboutMain {
+  flex: 1;
 }
 
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
 
-
-.aboutMainBanner p{
-        width: 50%;
-    font-size: large;
-    text-align: center;
-    margin: 1rem;
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space10);
 }
 
-.aboutMainBannerButton {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 1rem;
-   
+.sectionHeader h2 {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space4);
+  letter-spacing: -0.018em;
 }
 
-
-.aboutMainBannerButton button {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+.highlight {
+  color: var(--accent);
 }
 
-
-
-.aboutMainBannerButtonBlue{
-    background: #0090FF;
-    color: #ffffff;
-     
+.sectionSubtitle {
+  font-size: var(--body);
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.aboutMainBannerButtonWhite{
-    
-    background: white;
-    border: 1px solid #ccc;
-    
+/* ============================================
+   WHO WE ARE
+   ============================================ */
+
+.whoContent {
+  display: grid;
+  gap: var(--space8);
 }
 
-
-
-
-.who h3{
-        color: black;
-    font-size: 30px;
-    font-weight: 600;
+.whoText {
+  font-size: var(--body);
+  line-height: 1.75;
+  color: var(--muted);
 }
 
-.who p ,.who li{
-    font-size: 18px;
+.whoText p {
+  margin-bottom: var(--space4);
 }
 
-
-
-.whoRightBox {
-    padding: 2rem;
-    background: #0A99DD;
-    border-radius: 8px;
-    color: white!important;
+.whoText p:last-child {
+  margin-bottom: 0;
 }
 
-.whoRightBox h3{
-    color: #ffffff;
+.expertiseCard {
+  background: var(--accent);
+  color: white;
 }
 
-.whoRightBox ul {
-      list-style-type: disc; 
-      margin-left: 1rem;
-
-    }
-
-.whoRight{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.expertiseCard h3 {
+  color: white;
+  font-size: var(--h3);
+  margin-bottom: var(--space4);
+  letter-spacing: -0.015em;
 }
 
-
-
-
-
-.foundation p{
-    width: 50%;
-    font-size: large;
-    text-align: center;
-        color: #414141;
-
+.expertiseList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space4);
 }
 
-
-
-
-
-
-.partOfBlue {
-    color: #0A99DD;
+.expertiseList li {
+  font-size: var(--body);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  padding-left: var(--space4);
+  position: relative;
 }
 
-
-.partOf p{
-    width: 50%;
-    font-size: large;
-    text-align: center;
-        color: #414141;
-
+.expertiseList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: white;
+  font-weight: bold;
 }
 
-
-.strengthBox{
-    
-    background: #E2F3FE;
-    color: black;
-    border-radius: 8px;
-    text-align: center;
-
+.expertiseList li strong {
+  color: white;
+  font-weight: 600;
 }
 
+/* ============================================
+   VALUES GRID - Equal Height Cards
+   ============================================ */
 
-.strengthBox h3{
-    font-size: 30px;
-    font-weight: 600;
-
+.valuesGrid {
+  display: grid;
+  gap: var(--space6);
+  align-items: stretch;
 }
 
-.strengthBox p{
-    font-size: 18px;
-    color: #414141;
-    
+.valueIcon {
+  width: 48px;
+  height: 48px;
+  background: var(--accentSoft);
+  border-radius: var(--radiusMd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: var(--space4);
 }
 
-
-
-.aboutCard {
-    color: black;
-    display: flex;
-    gap: 0.5rem;
-    padding: 1.5rem  3rem 1.5rem 1.5rem;
-    border-radius: 10px;
-    background: white;
-    border: 1px solid #dadada7a;
-
+.valueTitle {
+  font-size: var(--h4);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space3);
+  letter-spacing: -0.012em;
 }
 
-.aboutCardImg{
-     --tw-bg-opacity: 1;
-    background-color: rgb(224 242 254 / var(--tw-bg-opacity, 1));
-    width: fit-content;
-    border-radius: 8px;
-    padding: 0.7rem;
-    height: fit-content;
+.valueDescription {
+  font-size: var(--body);
+  line-height: 1.65;
+  color: var(--muted);
 }
 
-.aboutCardImg svg{
- --tw-text-opacity: 1;
-    color: rgb(2 132 199 / var(--tw-text-opacity, 1));
+/* ============================================
+   LEADERSHIP - Fixed Empty Space
+   ============================================ */
 
+.leadershipGrid {
+  display: grid;
+  gap: var(--space8);
 }
 
-.aboutCard:hover{
-       box-shadow: 0px 1px 3px #ccccccde ;
+.leaderCard {
+  padding: var(--space8);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radiusLg);
+  box-shadow: var(--shadowSm);
+  min-height: unset;
 }
 
-
-.leaderCard{
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0px 1px 3px #ccccccde ;
-    background: white;
-    color: black;
-    text-align: justify;
-    
+.leaderCard h3 {
+  font-size: var(--h3);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space2);
+  letter-spacing: -0.015em;
+  line-height: 1.25;
 }
 
-.leaderCard h3{
-    font-size: 24px;
-    font-weight: 700;
-   }
-
-  
-
-
-
-
-@media only screen and (min-width:700px){
-    .who{
-    color: #414141;
-
-    padding: 2rem 7rem;
-    background: white;
-
-}
-    
-
-.whoFlex{
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 60% 40%;
+.leaderCard h4 {
+  font-size: var(--body);
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--space4);
+  line-height: 1.5;
 }
 
-.foundation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    padding: 1rem  7rem;
-    background: #F9FAFB;
+.leaderCard p {
+  font-size: var(--body);
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: var(--space4);
+  text-align: left;
 }
 
-
-
-.foundation h3{
-    font-size: 40px;
-    font-weight: 800;
-    margin: 0.7rem;
-
+.leaderCard p:last-child {
+  margin-bottom: 0;
 }
 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 
-.aboutCards {
-    padding: 2rem 7rem ;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background: #F9FAFB;
-    gap: 1.5rem;
+@media (min-width: 768px) {
+  .whoContent {
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space12);
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+
+  .leadershipGrid {
+    gap: var(--space10);
+  }
 }
 
+@media (min-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+  }
 
-.partOf h3{
-    font-size: 40px;
-    font-weight: 800;
-    margin: 0.7rem;
+  .leadershipGrid {
+    gap: var(--space12);
+  }
 
+  .leaderCard {
+    padding: var(--space10);
+  }
 }
 
-.partOf{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    padding: 4rem  7rem;
-    background: white;
-}
-.strength {
-    padding: 2rem 8rem;
-}
-
-.strengthBox{
-    padding: 2rem 8rem;}
-
-    .leadershipCards{
-    padding: 1rem 7rem;
-    background: #f9fafb;
-    display: grid;
-    gap: 1rem;
-}
-  .leaderCard h5{
-    font-size: 18px;
-    font-weight: 700;
-   }
-
-
-
-}
-
-
-@media only screen and (max-width:700px){
-
-     .aboutMainBanner {
-        padding:2rem 1rem;
-    }
-
-    .aboutMainBannerHeading{
-        font-size: 37px;
-        text-align: center;
-    }
-
-    .aboutMainBanner p{
-        width: 90%;
-    }
-
-    .who{
-    color: #414141;
-
-    padding: 2rem 1rem;
-    background: white;
-
-}
-
-.whoFlex{
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 100%;
-}
-
-.foundation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    padding: 2rem 1rem;
-    background: #F9FAFB;
-}
-
-
-
-.foundation h3{
-    font-size: 30px;
-    font-weight: 800;
-    margin: 0.7rem;
-
-}
-
-
-.foundation p{
-    width: 100%;
-
-}
-
-
-.aboutCards {
-    padding: 2rem 1rem ;
-    display: grid;
-    grid-template-columns: 100%;
-    background: #F9FAFB;
-    gap: 1.5rem;
-}
-
-.partOf{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    padding: 2rem  1rem;
-    background: white;
-    
-}
-
-.partOf h3{
-    font-size: 30px;
-    font-weight: 800;
-    margin: 0.7rem;
-    text-align: center;
-
-}
-
-.partOf p{
-    width: 100%;
-}
-.strength  {
-    padding: 2rem 1rem;
-}
-
-.strengthBox{
-    padding: 2rem;
-
-}
-
-.leadershipCards{
-    padding: 1rem;
-    background: #f9fafb;
-    display: grid;
-    gap: 1rem;
-}
-
-  .leaderCard h5{
-    font-size: 16px;
-    font-weight: 700;
-   }
-
-
+@media (min-width: 900px) and (max-width: 1100px) {
+  .leaderCard {
+    padding: var(--space8);
+  }
 }

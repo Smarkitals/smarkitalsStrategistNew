@@ -1,0 +1,33 @@
+.rotator {
+  position: relative;
+  min-height: 1.5em;
+  display: inline-block;
+}
+
+.message {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  left: 0;
+  top: 0;
+}
+
+.message.active {
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .message {
+    position: relative;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  
+  .message.active {
+    transform: none;
+  }
+}

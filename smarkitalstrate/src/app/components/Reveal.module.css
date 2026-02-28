@@ -1,0 +1,63 @@
+.reveal {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Variants */
+.reveal.fadeUp {
+  transform: translateY(8px);
+}
+
+.reveal.fadeIn {
+  transform: none;
+}
+
+.reveal.fade-up {
+  transform: translateY(8px);
+}
+
+.reveal.fade-in {
+  transform: none;
+}
+
+.reveal.fadeUp.visible,
+.reveal.fade-up.visible,
+.reveal.fadeIn.visible,
+.reveal.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger support */
+.reveal.stagger > * {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.reveal.stagger.visible > *:nth-child(1) { transition-delay: 0ms; }
+.reveal.stagger.visible > *:nth-child(2) { transition-delay: 100ms; }
+.reveal.stagger.visible > *:nth-child(3) { transition-delay: 200ms; }
+.reveal.stagger.visible > *:nth-child(4) { transition-delay: 300ms; }
+.reveal.stagger.visible > *:nth-child(5) { transition-delay: 400ms; }
+.reveal.stagger.visible > *:nth-child(6) { transition-delay: 500ms; }
+
+.reveal.stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  
+  .reveal.stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -1,142 +1,410 @@
-/* .navOptionsMobile {
-    display: none;
-} */
+/* ============================================
+   NAVIGATION BAR - Ultra Luxury
+   ============================================ */
 
-.logo h2 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #199BFF;
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(18, 18, 20, 0.04);
 }
-.nav{
-        display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background: white;
-    color: black;
+
+.navContainer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--space4) var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space6);
 }
-.hamburger {
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo a {
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.logo a:hover {
+  opacity: 0.8;
+}
+
+.logo a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radiusSm);
+}
+
+/* Desktop Navigation Links */
+.navOptions {
+  display: none;
+  gap: var(--space2);
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: block;
+  padding: var(--space2) var(--space4);
+  color: var(--ink);
+  font-size: var(--body);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radiusSm);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--space4);
+  right: var(--space4);
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.navLink:hover::after,
+.navLink:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.navLink:hover {
+  color: var(--accent);
+}
+
+.navLink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.navActive {
+  color: var(--accent);
+  background: var(--accentSoft);
+}
+
+.navActive::after {
+  transform: scaleX(1);
+}
+
+.navButtonDiv {
   display: none;
 }
 
-.navActive{
-    background: #E5F3FF;
-    color: #199BFF;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+/* Hamburger Menu */
+.hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--ink);
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+  border-radius: var(--radiusSm);
 }
 
+.hamburger:hover {
+  color: var(--accent);
+  background: var(--accentSoft);
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.hamburgerIcon {
+  display: block;
+  line-height: 1;
+}
+
+/* Mobile Menu */
 .navOptionsMobile {
   display: none;
   flex-direction: column;
-  background-color: white;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: var(--space4);
+  gap: var(--space2);
   position: absolute;
-  top: 60px; /* adjust based on nav height */
+  top: 100%;
+  left: 0;
   right: 0;
-  width: 100%;
-  padding: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-}   
-
-.navOptionsMobile h4{
-     padding: 0.5rem 1rem;
+  box-shadow: var(--shadowMd);
 }
 
+.navOptionsMobile[role="menu"] {
+  display: flex;
+}
 
+.navLinkMobile {
+  display: block;
+  padding: var(--space3) var(--space4);
+  color: var(--ink);
+  font-size: var(--body);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radiusSm);
+  transition: all 0.2s ease;
+}
+
+.navLinkMobile:hover,
+.navLinkMobile:focus-visible {
+  background: var(--accentSoft);
+  color: var(--accent);
+  outline: none;
+}
+
+.navLinkMobile:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.mobileCTA {
+  margin-top: var(--space4);
+  padding-top: var(--space4);
+  border-top: 1px solid var(--border);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
 
 .footer {
-    color: #fff!important;
-    padding: 2rem;
-    background: #111827;
+  background: var(--footerBg);
+  color: var(--footerText);
+  padding: var(--sectionYSm) 0 var(--space8);
+  margin-top: var(--space12);
 }
 
-
-
-
-.footerUpperAbout > h2 ,.footerUpperLinks > h3 , .footerUpperContact > h3{
-    font-size: x-large;
-    margin-bottom: 1rem;
+.footerContainer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
+.footerUpper {
+  display: grid;
+  gap: var(--space8);
+  margin-bottom: var(--space8);
+}
+
+.footerUpperAbout h2,
+.footerUpperLinks h3,
+.footerUpperContact h3 {
+  font-size: var(--h4);
+  font-weight: 600;
+  color: white;
+  margin-bottom: var(--space5);
+  letter-spacing: -0.012em;
+}
+
+.footerUpperAbout p {
+  color: var(--footerText);
+  line-height: 1.7;
+  margin-bottom: var(--space4);
+  font-size: var(--body);
+}
+
+.footerUpperAboutIcons {
+  display: flex;
+  align-items: center;
+  gap: var(--space4);
+  margin-top: var(--space4);
+}
+
+.footerUpperAboutIcons a {
+  color: var(--footerText);
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radiusSm);
+}
+
+.footerUpperAboutIcons a:hover,
+.footerUpperAboutIcons a:focus-visible {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.footerUpperAboutIcons a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space2);
+}
+
+.footerLink {
+  color: var(--footerText);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: var(--space1) 0;
+  font-size: var(--body);
+}
+
+.footerLink:hover,
+.footerLink:focus-visible {
+  color: white;
+  outline: none;
+}
+
+.footerLink:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+  border-radius: var(--radiusSm);
+}
+
+.footerUpperContactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space3);
+}
+
+.footerUpperContactDetails a {
+  color: var(--footerText);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: var(--body);
+}
+
+.footerUpperContactDetails a:hover,
+.footerUpperContactDetails a:focus-visible {
+  color: white;
+  outline: none;
+}
+
+.footerUpperContactDetails a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+  border-radius: var(--radiusSm);
+}
+
+.footerUpperContactDetails h4 {
+  font-size: var(--body);
+  font-weight: 500;
+  color: var(--footerText);
+  margin: 0;
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: var(--space8) 0;
+}
 
 .footerLower {
-    text-align: center;
+  text-align: center;
+  padding-top: var(--space6);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.Hr {
-    border-top: 1px solid #42424252;
+.footerLower h4 {
+  font-size: var(--small);
+  font-weight: 400;
+  color: var(--footerText);
+  margin-bottom: var(--space2);
 }
 
-.footerUpperAboutIcons{
-        display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    align-content: center;
-    gap: 1rem;
-    margin-top: 0.7rem;
+.footerLowerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space2);
+  margin-top: var(--space4);
 }
 
+.footerLowerLinks p {
+  color: var(--footerText);
+  font-size: var(--small);
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
 
-@media only screen and (min-width:700px){
-    .navOptions {
+.footerLowerLinks p:hover {
+  color: white;
+}
+
+.footerLowerLinks p:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+  border-radius: var(--radiusSm);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 768px) {
+  .navOptions {
     display: flex;
-    gap: 2rem;
-    align-items: center;
+  }
 
-    
-}
- 
- 
-.navbutton{
-        background: #199BFF;
-    padding: 0.5rem 1.5rem;
-    border-radius: 9px;
-    color: white;
-}
-
-.footerUpper {
-        display: grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-items: center;
-        line-height: 1.75rem;
-
-}
-
-}
-
-
-
-@media only screen and (max-width:700px){
-
-    .navbuttonDiv ,.navOptions {
-        display: none;
-    }
-    .nav{
-    padding: 1rem;
-  
-}
-
-.hamburger {
+  .navButtonDiv {
     display: block;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
   }
 
-   .navOptionsMobile {
-    display: flex;
+  .hamburger {
+    display: none;
   }
-.footerUpper {
-        display: grid;
-    grid-template-columns: 100%;
-    justify-items: start;
-        line-height: 1.75rem;
-        row-gap: 1.5rem;
 
+  .navOptionsMobile {
+    display: none !important;
+  }
+
+  .footerUpper {
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: var(--space12);
+  }
 }
 
+@media (min-width: 1024px) {
+  .navContainer {
+    padding: var(--space5) var(--container-padding);
+  }
 
+  .navOptions {
+    gap: var(--space4);
+  }
+}
 
+@media (min-width: 900px) and (max-width: 1100px) {
+  .footerUpper {
+    gap: var(--space10);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .navLink,
+  .hamburger {
+    transition: none;
+  }
 }

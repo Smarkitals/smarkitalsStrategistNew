@@ -1,118 +1,141 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import styles from "../css/nav.module.css";
 import Image from "next/image";
+import Button from "../components/Button";
 
 export default function Nav() {
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState('');
+  const pathname = usePathname();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-
-  useEffect(() => {
-    const href = window.location.href;
-    const val = href.split('/');
-    console.log(val);
-    if (val.length > 1) {
-      setActiveTab(val[3] || ''); // assuming val[3] holds the route (for `/about`, `/services`, etc.)
-    }
-  }, []);
-
-  const handleClick = (path) => () => {
-    setActiveTab(path);
-    router.push('/'+path);
+  // Determine active tab from pathname
+  const getActivePath = () => {
+    if (pathname === '/') return '';
+    return pathname.replace('/', '');
   };
 
+  const activeTab = getActivePath();
+
+  const handleClick = (path) => () => {
+    setShowMobileMenu(false);
+    router.push(path === '' ? '/' : `/${path}`);
+  };
+
+  const toggleMobileMenu = () => {
+    setShowMobileMenu(prev => !prev);
+  };
+
+  // Close mobile menu on escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && showMobileMenu) {
+        setShowMobileMenu(false);
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [showMobileMenu]);
+
+  const navLinks = [
+    { path: '', label: 'Home' },
+    { path: 'about', label: 'About Us' },
+    { path: 'services', label: 'Services' },
+    { path: 'why-choose-us', label: 'Why Choose Us' },
+    { path: 'contact', label: 'Contact' },
+  ];
+
   return (
-    <div className={styles.nav}>
-      <div className={styles.logo}>
-        <Image src="/logo.png" alt="Smarkitals Strategist LLP"  width={150}
-      height={90}/>
-       {/* <h2>
-          Smarkitals Strategist LLP
-        </h2>
-        */}
-      </div>
+    <header className={styles.nav}>
+      <nav className={styles.navContainer} aria-label="Main navigation">
+        <div className={styles.logo}>
+          <a 
+            href="/" 
+            onClick={(e) => { e.preventDefault(); handleClick('')(); }}
+            aria-label="Smarkitals Strategist LLP Home"
+          >
+            <Image 
+              src="/logo.png" 
+              alt="Smarkitals Strategist LLP" 
+              width={150}
+              height={90}
+              priority
+            />
+          </a>
+        </div>
 
-      <div className={styles.navOptions}>
-        <h4
-          className={activeTab === '' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('')}
-        >
-          Home
-        </h4>
-        <h4
-          className={activeTab === 'about' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('about')}
-        >
-          About Us
-        </h4>
-        <h4
-          className={activeTab === 'services' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('services')}
-        >
-          Services
-        </h4>
-        <h4
-          className={activeTab === 'why-choose-us' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('why-choose-us')}
-        >
-          Why Choose Us
-        </h4>
-        <h4
-          className={activeTab === 'contact' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('contact')}
-        >
-          Contact
-        </h4>
-      </div>
+        <div className={styles.navOptions} role="list">
+          {navLinks.map((link) => (
+            <a
+              key={link.path}
+              href={link.path === '' ? '/' : `/${link.path}`}
+              onClick={handleClick(link.path)}
+              className={`${styles.navLink} ${activeTab === link.path ? styles.navActive : ''}`}
+              role="listitem"
+              aria-current={activeTab === link.path ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
 
+        <div className={styles.navButtonDiv}>
+          <Button 
+            href="/contact" 
+            variant="primary" 
+            size="md"
+            onClick={handleClick('contact')}
+          >
+            Book a Call
+          </Button>
+        </div>
 
-  <div className={styles.hamburger} onClick={() => setShowMobileMenu(prev => !prev)}>
-      ☰
-    </div>
+        <button
+          className={styles.hamburger}
+          onClick={toggleMobileMenu}
+          aria-label={showMobileMenu ? 'Close menu' : 'Open menu'}
+          aria-expanded={showMobileMenu}
+          aria-controls="mobile-menu"
+        >
+          <span className={styles.hamburgerIcon}>
+            {showMobileMenu ? '✕' : '☰'}
+          </span>
+        </button>
+      </nav>
 
-
- {showMobileMenu && (
-      <div className={styles.navOptionsMobile}>
-        <h4
-          className={activeTab === '' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('')}
+      {showMobileMenu && (
+        <div 
+          id="mobile-menu"
+          className={styles.navOptionsMobile}
+          role="menu"
+          aria-label="Mobile navigation menu"
         >
-          Home
-        </h4>
-        <h4
-          className={activeTab === 'about' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('about')}
-        >
-          About Us
-        </h4>
-        <h4
-          className={activeTab === 'services' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('services')}
-        >
-          Services
-        </h4>
-        <h4
-          className={activeTab === 'why-choose-us' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('why-choose-us')}
-        >
-          Why Choose Us
-        </h4>
-        <h4
-          className={activeTab === 'contact' ? styles.navActive : ''} style={{ cursor: 'pointer' }}
-          onClick={handleClick('contact')}
-        >
-          Contact
-        </h4>
-      </div>
- )}
-
-      <div className={styles.navbuttonDiv}>
-        <button style={{ cursor: 'pointer' }}  onClick={handleClick('contact')} className={styles.navbutton}>Get Started</button>
-      </div>
-    </div>
+          {navLinks.map((link) => (
+            <a
+              key={link.path}
+              href={link.path === '' ? '/' : `/${link.path}`}
+              onClick={handleClick(link.path)}
+              className={`${styles.navLinkMobile} ${activeTab === link.path ? styles.navActive : ''}`}
+              role="menuitem"
+              aria-current={activeTab === link.path ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
+          <div className={styles.mobileCTA}>
+            <Button 
+              href="/contact" 
+              variant="primary" 
+              size="md"
+              onClick={handleClick('contact')}
+            >
+              Book a Call
+            </Button>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }

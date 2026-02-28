@@ -1,0 +1,48 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radiusLg);
+  padding: var(--space6);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadowSm);
+}
+
+/* Subtle sheen gradient overlay */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: var(--sheen-gradient);
+  border-radius: var(--radiusLg) var(--radiusLg) 0 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.card.hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadowMd);
+  border-color: var(--borderStrong);
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: var(--space8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+  
+  .card.hover:hover {
+    transform: none;
+  }
+}
