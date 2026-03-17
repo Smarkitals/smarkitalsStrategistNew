@@ -177,9 +177,9 @@ export default function PrivacyPolicyPage() {
                 India
               </p>
               <p>
-                Email: <span>[Insert Official Email]</span>
+                Email: <span>[info@smarkitals.com]</span>
                 <br />
-                Phone: <span>[Insert Contact Number]</span>
+                Phone: <span>+91-9891894129</span>
               </p>
             </section>
           </article>
