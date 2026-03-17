@@ -17,6 +17,7 @@ export default function Footer() {
     { path: '/services', label: 'Services' },
     { path: '/why-choose-us', label: 'Why Choose Us' },
     { path: '/contact', label: 'Contact' },
+    { path: '/privacy-policy', label: 'Privacy Policy' },
   ];
 
   return (
